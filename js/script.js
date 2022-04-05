@@ -31,11 +31,29 @@ $(document).ready(function(){
   
     $(document).on('scroll',function(){
       var top = $(this).scrollTop() 
-      console.log(top)
-        if( top > height ) { 
-          $('header').css({'position':'fixed'})
+      console.log(top,'스크롤')
+      if( top > height ) {   
+          $('header').addClass('fixed').css('borderBottom','1px solid #cccccc')
+          $('header .gnb .logo').remove()
+          $('header .gnb .shopping').before('<li class="logo"><a href="./peripera.html"><img src="./img/logo_peripera.png" alt="로고"></a></li>')
+          $('header .gnb>li span').css({ 'color':'#343434' , 'font-size':'20px'})
+          $('header .product_sub>li, header .brand_sub>li, header .media_sub>li').css({'border':'1px solid rgb(224, 224, 224)'})
+          $('header .search, header .gnb_wrap').css({ display:'flex'}) 
+          $('header .brand_sub').css({marginRight : '320px'})
+          $('header .media_sub').css({right : '190px'})
+          $('header .gnb_wrap').css('marginTop','0')
+
+
         }else{
-          $('header').css({'position':'absolute'})
+          $('header').removeClass('fixed').css('borderBottom','0')
+          $('header .gnb .logo').remove()
+          $('header .gnb .product').after('<li class="logo"><a href="./peripera.html"><img src="./img/logo_peripera_white.png" alt="로고"></a></li>')
+          $('header .gnb li span').css({ 'color':'#fff' , 'font-size':'22px'})
+          $('header .product_sub>li, header .brand_sub>li, header .media_sub>li').css({'border':'0','border-bottom':'1px solid rgb(224, 224, 224)'})
+          $('header .search').css('display','none')
+          $('header .brand_sub').css({marginRight : '175px'})
+          $('header .media_sub').css({right : '5px'})
+          $('header .gnb_wrap').css('marginTop','40px')
         }
       })
 
