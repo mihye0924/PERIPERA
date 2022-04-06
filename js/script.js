@@ -26,12 +26,11 @@ $(document).ready(function(){
 
     // 메인 넘어갈때 fixed gnb
     var height = $('main').height()
-    console.log(height,'높이') 
+    // console.log(height,'높이') 
 
-  
-    $(document).on('scroll',function(){
+    $(window).on('scroll',function(){
       var top = $(this).scrollTop() 
-      console.log(top,'스크롤')
+      // console.log(top,'스크롤')
       if( top > height ) {   
           $('header').addClass('fixed').css('borderBottom','1px solid #cccccc')
           $('header .gnb .logo').remove()
@@ -59,9 +58,7 @@ $(document).ready(function(){
 
 
       // 네비
-      // productsub
-    
- 
+      // productsub 
       $('header .gnb .product').on('mouseover',function(){
         $('.product_sub').slideDown()
         $(this).addClass('hover')  
