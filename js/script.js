@@ -9,6 +9,17 @@ $(document).ready(function(){
         },
     });
 
+
+    var periMood = new Swiper(".periMood", {
+      navigation: {
+        nextEl: ".periMood-button-next",
+        prevEl: ".periMood-button-prev",
+      },
+      slidesPerView : 4,
+      spaceBetween : 15,
+    });
+
+
     // 메인 재생, 멈춤 버튼
     $('.main-pagination').append('<div class="playBtn active"><img src="../img/play.png" alt="재생"/></div>' +
     '<div class="pasueBtn"><img src="../img/pause.png" alt="멈춤"/></div>')
@@ -38,8 +49,9 @@ $(document).ready(function(){
           $('header .gnb>li span').css({ 'color':'#343434' , 'font-size':'20px'})
           $('header .product_sub>li, header .brand_sub>li, header .media_sub>li').css({'border':'1px solid rgb(224, 224, 224)'})
           $('header .search, header .gnb_wrap').css({ display:'flex'}) 
-          $('header .brand_sub').css({marginRight : '320px'})
-          $('header .media_sub').css({right : '190px'})
+          $('header .product_sub').css({marginLeft : '-15px'})
+          $('header .brand_sub').css({marginRight : '400px'})
+          $('header .media_sub').css({right : '245px'})
           $('header .gnb_wrap').css('marginTop','0')
 
 
@@ -50,8 +62,8 @@ $(document).ready(function(){
           $('header .gnb li span').css({ 'color':'#fff' , 'font-size':'22px'})
           $('header .product_sub>li, header .brand_sub>li, header .media_sub>li').css({'border':'0','border-bottom':'1px solid rgb(224, 224, 224)'})
           $('header .search').css('display','none')
-          $('header .brand_sub').css({marginRight : '175px'})
-          $('header .media_sub').css({right : '5px'})
+          $('header .brand_sub').css({marginRight : '235px'})
+          $('header .media_sub').css({right : '60px'})
           $('header .gnb_wrap').css('marginTop','40px')
         }
       })
@@ -86,4 +98,32 @@ $(document).ready(function(){
       }) 
  
 
+      // mdPick btn
+      $('#mdPick_wrap .btnBox .all').on('click',function(){
+        $('.allInner').css({ display : 'flex' })
+        $('.allBtn').css({ display : 'block' })
+        $('.baseInner, .eyeInner, .lipInner').css({ display : 'none' })
+        $('.baseBtn, .eyeBtn, .lipBtn').css({ display : 'none' })
+      })
+
+      $('#mdPick_wrap .btnBox .base').on('click',function(){
+        $('.baseInner').css({ display : 'flex' })
+        $('.baseBtn').css({ display : 'block' })
+        $('.allInner, .eyeInner, .lipInner').css({ display : 'none' })
+        $('.allBtn, .eyeBtn, .lipBtn').css({ display : 'none' })
+      })
+
+      $('#mdPick_wrap .btnBox .eye').on('click',function(){
+        $('.eyeInner').css({ display : 'flex' })
+        $('.eyeBtn').css({ display : 'block' })
+        $('.allInner, .baseInner, .lipInner').css({ display : 'none' })
+        $('.allBtn, .baseBtn, .lipBtn').css({ display : 'none' })
+      })
+
+      $('#mdPick_wrap .btnBox .lip').on('click',function(){
+        $('.lipInner').css({ display : 'flex' })
+        $('.lipBtn').css({ display : 'block' })
+        $('.allInner, .baseInner, .eyeInner').css({ display : 'none' })
+        $('.allBtn, .baseBtn, .eyeBtn').css({ display : 'none' })
+      })
 })

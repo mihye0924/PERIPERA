@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PERIPERA</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/> 
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/slide.js"></script>
     <script src="./js/script.js"></script>
 </head>
 <body>
@@ -78,7 +79,7 @@
         <!-- 베스트 상품 -->
         <section id="bestProduct_wrap">
             <h1 class="mainTitle">BEST PRODUCT</h1>
-            <h2 class="subTitle">PERIPERA 새로운 신상품</h2>
+            <h2 class="subTitle">PERIPERA의 베스트 상품</h2>
             <div class="content">
                 <ul>
                     <li class="hover">
@@ -125,14 +126,643 @@
                 
             </div>
         </section>
-        <section id="periMood_wrap"></section>
-        <section id="mdPick_wrap"></section>
-        <section id="banner"></section>
-        <section id="insta_wrap"></section>
+        <section id="newProduct_wrap">
+            <div class="content">
+                <ul>
+                    <li>
+                        <img src="./img/NEW01.jpg" alt="신상품01">
+                        <a href="#">
+                            <p>재유Pick♥ 잉크 더 벨벳 #누디브루</p>
+                            <span>상품보기</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <img src="./img/NEW02.jpg" alt="신상품02">
+                        <a href="#">
+                            <p>밀크 블러 톤업 크림</p>
+                            <span>상품보기</span>
+                        </a>
+                    </li>  
+                    <li>
+                        <img src="./img/NEW03.jpg" alt="신상품03">
+                        <a href="#">
+                            <p>[NEW] 잉크 무드 글로이 틴트</p>
+                            <span>상품보기</span>
+                        </a>
+                    </li>  
+                    <li>
+                        <img src="./img/NEW04.jpg" alt="신상품04">
+                        <a href="#">
+                            <p>올테이크 무드 팔레트</p>
+                    
+                            <span>상품보기</span>
+                        </a>
+                    </li>  
+                </ul>
+            </div>
+        </section>
+
+        <section id="periMood_wrap">
+            <h1 class="mainTitle">PERI MOOD</h1>
+            <h2 class="subTitle">PERIPERA 만의 감성적인 무드</h2>
+  
+                <div class="swiper periMood">
+                    <ul class="swiper-wrapper content">
+                        <li class="swiper-slide"> 
+                            <img src="./img/mood01.jpg" alt="무드01">
+                            <a href="#">
+                                <div class="textBox">
+                                    <span>PINK:TEREST</span> 
+                                    <span>상품보기</span>
+                                </div>
+                            </a>  
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="./img/mood02.jpg" alt="무드02">
+                            <a href="#">
+                                <span>INK MOOD <br> GLOWY TINT</span>
+                                <span>상품보기</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="./img/mood03.jpg" alt="무드03">
+                            <a href="#">
+                                <span>NUDE-BREW</span>
+                                <span>상품보기</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="./img/mood04.jpg" alt="무드04">
+                            <a href="#">
+                                <span>PERICAMPING WITH<br>TETEUM</span>
+                                <span>상품보기</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="./img/mood05.jpg" alt="무드05">
+                            <a href="#">
+                                <span>DEAR.구슬</span>
+                                <span>상품보기</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="./img/mood06.jpg" alt="무드06">
+                            <a href="#">
+                                <span>GENTLE<br>CARROT</span>
+                                <span>상품보기</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="./img/mood07.jpg" alt="무드07">
+                            <a href="#">
+                                <span>CHERRY<br>COOL RUSH</span>
+                                <span>상품보기</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="./img/mood08.jpg" alt="무드08">
+                            <a href="#">
+                                <span>MILKY<br>FILTER</span>
+                                <span>상품보기</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="./img/mood09.jpg" alt="무드09">
+                            <a href="#">
+                                <span>S.O.S<br>(SUGAR OR SALT)</span>
+                                <span>상품보기</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="./img/mood10.jpg" alt="무드10">
+                            <a href="#">
+                                <span>BITTER<br>PINK</span>
+                                <span>상품보기</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="./img/mood11.jpg" alt="무드11">
+                            <a href="#">
+                                <span>PERDRO<br>POLITAN</span>
+                                <span>상품보기</span>
+                            </a>
+                        </li>
+                    </ul>  
+                </div> 
+                <div data-swiper-parallax-opacity="0.3" class="periMood-button-prev"></div>
+                <div class="periMood-button-next"></div>
+            
+        </section>
+        <section id="mdPick_wrap">
+            <h1 class="mainTitle">MD'S PICK</h1>
+            <h2 class="subTitle">PERIPERA에서 가장 잘 나가는 상품들</h2>
+            <div class="btnBox">
+                <button class="all"><span>ALL</span></button>
+                <button class="base"><span>BASE</span></button>
+                <button class="eye"><span>EYE</span></button>
+                <button class="lip"><span>LIP</span></button>
+            </div>
+
+            <div class="content"> 
+                <ul class="allInner">
+                    <li>
+                        <img src="./img/all01.jpg" alt="전체상품01">
+                        <a href="#">
+                            <p>[NEW] 잉크 더 무드 글로이 틴트</p>
+                            <span>10,000원</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <img src="./img/all02.jpg" alt="전체상품02">
+                        <a href="#">
+                            <p>올테이크 무드 테크닉 팔레트</p>
+                            <span>23,000원</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <img src="./img/all03.jpg" alt="전체상품03">
+                        <a href="#">
+                            <p>올테이크 무드 팔레트</p>
+                            <span>19,000원</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <img src="./img/all04.jpg" alt="전체상품04">
+                        <a href="#">
+                            <p>올테이크 무드 치크 팔레트</p>
+                            <span>18,000원</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <img src="./img/all05.jpg" alt="전체상품05">
+                        <a href="#">
+                            <p>잉크 블랙 카라(AD)</p>
+                            <span>10,000원</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <img src="./img/all06.jpg" alt="전체상품06">
+                        <a href="#">
+                            <p>잉크 무드 매트 스틱</p>
+                            <span>12,000원</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <img src="./img/all07.jpg" alt="전체상품07">
+                        <a href="#">
+                            <p>맑게 물든 선샤인 치크</p>
+                            <span>14,000원</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <img src="./img/all08.jpg" alt="전체상품08">
+                        <a href="#">
+                            <p>스피디 스키니 블로우</p>
+                            <span>10,000원</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <img src="./img/all09.jpg" alt="전체상품09">
+                        <a href="#">
+                            <p>슈가 트윙클 듀 아이 스틱</p>
+                            <span>20,000원</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <img src="./img/all10.jpg" alt="전체상품10">
+                        <a href="#">
+                            <p>잉크 씬씬 브러쉬 라이너</p>
+                            <span>6,500원</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <img src="./img/all11.jpg" alt="전체상품11">
+                        <a href="#">
+                            <p>밀크 블러 톤업 크림</p>
+                            <span>10,000원</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <img src="./img/all12.jpg" alt="전체상품12">
+                        <a href="#">
+                            <p>오일캡처 쿨링 파우더</p>
+                            <span>11,000원</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <img src="./img/all13.jpg" alt="전체상품13">
+                        <a href="#">
+                            <p>잉크 포켓 섀도우 팔레트</p>
+                            <span>14,000원</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <img src="./img/all14.jpg" alt="전체상품14">
+                        <a href="#">
+                            <p>듀오 포켓 글리터 섀도우</p>
+                            <span>8,000원</span>
+                        </a>
+                    </li>  
+                    <li>
+                        <img src="./img/all15.jpg" alt="전체상품15">
+                        <a href="#">
+                            <p>더블 롱웨어 커버 컨실러</p>
+                            <span>12,000원</span>
+                        </a>
+                    </li>  
+                    <li>
+                        <img src="./img/all15.jpg" alt="전체상품15">
+                        <a href="#">
+                            <p>잉크 더 벨벳(AD)</p>
+                            <span>9,000원</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <img src="./img/all17.jpg" alt="전체상품17">
+                        <a href="#">
+                            <p>잉크 무드 매트 틴트</p>
+                            <span>10,000원</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <img src="./img/all18.jpg" alt="전체상품18">
+                        <a href="#">
+                            <p>잉크 세팅 올데이 메이크업 픽서</p>
+                            <span>12,000원</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <img src="./img/all19.jpg" alt="전체상품19">
+                        <a href="#">
+                            <p>슈가 트윙클 리퀴드 글리터</p>
+                            <span>6,000원</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <img src="./img/all20.jpg" alt="전체상품20">
+                        <a href="#">
+                            <p>잉크 더 에어리벨벳 + 키링 기획세트</p>
+                            <span>14,000원</span>
+                        </a>
+                    </li> 
+                    <!-- <li>
+                        <img src="./img/all21.jpg" alt="전체상품21">
+                        <a href="#">
+                            <p>잉크 무드 드롭 틴트</p>
+                            <span>10,000원</span>
+                        </a>
+                    </li>  -->
+                </ul>
+                <button class="allBtn">
+                    <span></span>
+                    <span>더 많은 상품보기</span>
+                </button>
+
+                <ul class="baseInner">
+                    <li>
+                        <img src="./img/base01.jpg" alt="베이스01">
+                        <a href="#">
+                            <p>밀크 블러 톤업 크림</p>
+                            <span>10,000원</span>
+                        </a>
+                    </li>  
+                    <li>
+                        <img src="./img/base02.jpg" alt="베이스02">
+                        <a href="#">
+                            <p>오일 캡쳐 쿨링 파우더</p>
+                            <span>11,000원</span>
+                        </a>
+                    </li>  
+                    <li>
+                        <img src="./img/base03.jpg" alt="베이스03">
+                        <a href="#">
+                            <p>더블 롱웨어 커버 컨실러</p>
+                            <span>11,000원</span>
+                        </a>
+                    </li>  
+                    <li>
+                        <img src="./img/base04.jpg" alt="베이스04">
+                        <a href="#">
+                            <p>잉크 셰팅 올데이 메이크업 픽서</p>
+                            <span>12,000원</span>
+                        </a>
+                    </li>  
+                    <li>
+                        <img src="./img/base05.jpg" alt="베이스05">
+                        <a href="#">
+                            <p>더블 롱웨어 커버 쿠션</p>
+                            <span>14,000원</span>
+                        </a>
+                    </li>   
+                    <li>
+                        <img src="./img/base06.jpg" alt="베이스05">
+                        <a href="#">
+                            <p>오일캡쳐 커버 팩트</p>
+                            <span>10,000원</span>
+                        </a>
+                    </li>   
+                </ul>
+                <button class="baseBtn">
+                    <span></span>
+                    <span>더 많은 상품보기</span>
+                </button>
+
+                <ul class="eyeInner">
+                    <li>
+                        <img src="./img/eye01.jpg" alt="아이쉐도우01">
+                        <a href="#">
+                            <p>올테이크 무드 테크닉 팔레트</p>
+                            <span>23,000</span>
+                        </a>
+                    </li>   
+                    <li>
+                        <img src="./img/eye02.jpg" alt="아이쉐도우02">
+                        <a href="#">
+                            <p>올테이크 무드 팔레트</p>
+                            <span>19,000</span>
+                        </a>
+                    </li> 
+                    <li>
+                        <img src="./img/eye03.jpg" alt="아이쉐도우03">
+                        <a href="#">
+                            <p>잉크 블랙 카라 (AD)</p>
+                            <span>19,000</span>
+                        </a>
+                    </li>   
+                    <li>
+                        <img src="./img/all04.jpg" alt="아이쉐도우04">
+                        <a href="#">
+                            <p>스피디 스키니 브로우</p>
+                            <span>10,000</span>
+                        </a>
+                    </li>   
+                    <li>
+                        <img src="./img/all05.jpg" alt="아이쉐도우05">
+                        <a href="#">
+                            <p>슈가 트윙클 듀오 아이스틱</p>
+                            <span>20,000</span>
+                        </a>
+                    </li>   
+                    <li>
+                        <img src="./img/eye06.jpg" alt="아이쉐도우06">
+                        <a href="#">
+                            <p>잉크 씬씬 브러쉬라이너</p>
+                            <span>6,500</span>
+                        </a>
+                    </li>   
+                    <li>
+                        <img src="./img/eye07.jpg" alt="아이쉐도우07">
+                        <a href="#">
+                            <p>잉크 포켓 섀도우 팔레트</p>
+                            <span>14,500</span>
+                        </a>
+                    </li>   
+                    <li>
+                        <img src="./img/eye08.jpg" alt="아이쉐도우08">
+                        <a href="#">
+                            <p>듀오 포켓 글리터 섀도우</p>
+                            <span>8,000</span>
+                        </a>
+                    </li>   
+                    <li>
+                        <img src="./img/eye09.jpg" alt="아이쉐도우09">
+                        <a href="#">
+                            <p>슈가 트윙클 리퀴드 글리터</p>
+                            <span>6,000</span>
+                        </a>
+                    </li>   
+                    <li>
+                        <img src="./img/eye10.jpg" alt="아이쉐도우10">
+                        <a href="#">
+                            <p>잉크 씬씬 펜슬라이너</p>
+                            <span>6,500</span>
+                        </a>
+                    </li>   
+                    <li>
+                        <img src="./img/eye11.jpg" alt="아이쉐도우11">
+                        <a href="#">
+                            <p>잉크 씬씬 펜슬라이너</p>
+                            <span>6,500</span>
+                        </a>
+                    </li>  
+                    <li>
+                        <img src="./img/eye12.jpg" alt="아이쉐도우12">
+                        <a href="#">
+                            <p>잉크 컬러 카라 (AD)</p>
+                            <span>6,500</span>
+                        </a>
+                    </li>  
+                    <li>
+                        <img src="./img/eye13.jpg" alt="아이쉐도우13">
+                        <a href="#">
+                            <p>스피디 드로잉 롱웨어 브로우</p>
+                            <span>7,000</span>
+                        </a>
+                    </li>  
+                    <li>
+                        <img src="./img/eye14.jpeg" alt="아이쉐도우14">
+                        <a href="#">
+                            <p>스피디 브로우 오토 펜슬</p>
+                            <span>4,000</span>
+                        </a>
+                    </li>  
+
+                </ul>
+                <button class="eyeBtn">
+                    <span></span>
+                    <span>더 많은 상품보기</span>
+                </button>
+
+                <ul class="lipInner"> 
+                    <li>
+                        <img src="./img/lip01.jpg" alt="립01">
+                        <a href="#">
+                            <p>[NEW] 잉크 무드 글로이 틴트</p>
+                            <span>10,000</span>
+                        </a>
+                    </li>   
+                    <li>
+                        <img src="./img/lip02.jpg" alt="립02">
+                        <a href="#">
+                            <p>잉크 무드 매트 스틱</p>
+                            <span>12,000</span>
+                        </a>
+                    </li>   
+                    <li>
+                        <img src="./img/lip03.jpg" alt="립03">
+                        <a href="#">
+                            <p>잉크 더 벨벳 (AD)</p>
+                            <span>9,000</span>
+                        </a>
+                    </li>   
+                    <li>
+                        <img src="./img/lip04.jpg" alt="립04">
+                        <a href="#">
+                            <p>잉크 무드 매트 틴트</p>
+                            <span>10,000</span>
+                        </a>
+                    </li>   
+                    <li>
+                        <img src="./img/lip05.jpg" alt="립05">
+                        <a href="#">
+                            <p>잉크 더 에어리벨벳 + 키링 기획 세트</p>
+                            <span>14,000</span>
+                        </a>
+                    </li>   
+                    <li>
+                        <img src="./img/lip06.jpg" alt="립06">
+                        <a href="#">
+                            <p>잉크 무드 드롭 틴트</p>
+                            <span>10,000</span>
+                        </a>
+                    </li>   
+                    <li>
+                        <img src="./img/lip07.jpg" alt="립07">
+                        <a href="#">
+                            <p>잉크 더 에어리 벨벳 (AD)</p>
+                            <span>9,000</span>
+                        </a>
+                    </li>    
+                    <li>
+                        <img src="./img/lip08.jpg" alt="립08">
+                        <a href="#">
+                            <p>잉크 더 타투</p>
+                            <span>14,000</span>
+                        </a>
+                    </li>    
+                </ul>
+                <button class="lipBtn">
+                    <span></span>
+                    <span>더 많은 상품보기</span>
+                </button>
+            </div>
+        </section>
+        <section id="banner_wrap">
+            <div class="content">
+                <img src="./img/banner.jpg" alt="">
+            </div>
+        </section>
+        <section id="insta_wrap">
+            <h1 class="mainTitle">
+                <img src="./img/instagram.png" alt="인스타그램">
+                
+                <h2 class="subTitle">PERIPERA의 SNS's</h2>
+                <div class="btnBox">
+            </h1> 
+            <div class="content">
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/p/CcH_6Udv75j/">
+                            <img src="./img/insta_img01.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/CcHP_nHP1Fc/">
+                            <img src="./img/insta_img02.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/CcFeT-FvlRD/">
+                            <img src="./img/insta_img03.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/CcEnMpHPz03/">
+                            <img src="./img/insta_img04.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/CcC2ed6vmcj/">
+                            <img src="./img/insta_img05.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/CcCGUgPvoIU/">
+                            <img src="./img/insta_img06.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/CcAeq39PN5n/">
+                            <img src="./img/insta_img07.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/Cb_VINUPylg/">
+                            <img src="./img/insta_img08.jpg" alt="">
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://www.instagram.com/p/Cb7GGmcP9LN/">
+                            <img src="./img/insta_img09.jpg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/p/Cb6OwENvARF/">
+                            <img src="./img/insta_img10.jpg" alt="">
+                        </a>
+                    </li>  -->
+                </ul>
+            </div>
+        </section>
     </div>
 
     <footer>
-
+        <div id="familysite_wrap">
+            <ul>
+                <li>
+                    <img src="./img/clubclio.png" alt="클럽클리오">
+                    <span class="clearfix">클럽클리오</span>
+                </li>
+                <li>
+                    <img src="./img/instagram.png" alt="인스타">
+                    <span class="clearfix">인스타그램</span>
+                </li>
+                <li>
+                    <img src="./img/facebook.png" alt="페이스북">
+                    <span class="clearfix">페이스북</span>
+                </li>
+                <li>
+                    <img src="./img/youtube.png" alt="유튜브">
+                    <span class="clearfix">유튜브</span>
+                </li>
+            </ul>
+        </div>
+        <div id="footer_wrap">
+            <div class="inner_left">
+                <ul class="customerCenter">
+                    <li><span>고객센터</span></li> 
+                    <li><span>080-080-1510</span></li> 
+                </ul>
+                <ul class="customerTime">
+                    <li><span>상담시간</span></li>
+                    <li><span>월 ~ 금</span></li>
+                    <li><span>9:00 ~ 17:00</span></li>
+                </ul>
+                <ul class="lunchTime">
+                    <li><span>점심시간</span></li>
+                    <li><span>12:30 ~ 13:30</span></li>
+                </ul>
+                <span>( 토 / 일 공휴일 휴무 )</span>
+            </div>
+            <div class="inner_right">
+                <div class="logofamilysite_wrap">  
+                    <select name="" id="optionList">
+                        <option clss="familysite" disabled selected hidden>FAMILY SITE</option>
+                        <option value=""><span>(주)클리오</span></option>
+                        <option value=""><span>클럽클리오</span></option>
+                        <option value=""><span>클리오</span></option>
+                        <option value=""><span>구달</span></option>
+                        <option value=""><span>더마트리</span></option>
+                        <option value=""><span>트루알엑스</span></option>
+                    </select>  
+                    <h1 class="logo"><img src="./img/logo_peripera.png"/></h1>
+                </div>
+                <div class="address">
+                    <span>서울특별시 성동구 왕십리로 66 (주) 클리오 / 대표이사 : 한현욱</span>
+                    <span>COPYRIGHT &copy; 2016 CLUBCLIO.CO.LTE. ALL RIGHT RESERVED</span>
+                </div>
+            </div>  
+        </div>
     </footer>
 
 </body>
