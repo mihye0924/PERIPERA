@@ -24,16 +24,22 @@ $(document).ready(function(){
     $('.main-pagination').append('<div class="playBtn active"><img src="../img/play.png" alt="재생"/></div>' +
     '<div class="pasueBtn"><img src="../img/pause.png" alt="멈춤"/></div>')
 
+
+    
     $('.playBtn').on('click', function(){
+      console.log('중지')
       $(this).css('display','none')
       $('.pasueBtn').css('display','inline-block')
+      
+      $('#video')[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
+    
     })
     
     $('.pasueBtn').on('click', function(){
       $(this).css('display','none')
       $('.playBtn').css('display','inline-block')
     })
-
+ 
 
     // 메인 넘어갈때 fixed gnb
     var height = $('main').height()
@@ -50,8 +56,8 @@ $(document).ready(function(){
           $('header .product_sub>li, header .brand_sub>li, header .media_sub>li').css({'border':'1px solid rgb(224, 224, 224)'})
           $('header .search, header .gnb_wrap').css({ display:'flex'}) 
           $('header .product_sub').css({marginLeft : '-15px'})
-          $('header .brand_sub').css({marginRight : '400px'})
-          $('header .media_sub').css({right : '245px'})
+          $('header .brand_sub').css({marginRight : '408px'})
+          $('header .media_sub').css({right : '252px'})
           $('header .gnb_wrap').css('marginTop','0')
 
 
@@ -62,11 +68,12 @@ $(document).ready(function(){
           $('header .gnb li span').css({ 'color':'#fff' , 'font-size':'22px'})
           $('header .product_sub>li, header .brand_sub>li, header .media_sub>li').css({'border':'0','border-bottom':'1px solid rgb(224, 224, 224)'})
           $('header .search').css('display','none')
-          $('header .brand_sub').css({marginRight : '235px'})
-          $('header .media_sub').css({right : '60px'})
+          $('header .brand_sub').css({marginRight : '250px'})
+          $('header .media_sub').css({right : '70px'})
           $('header .gnb_wrap').css('marginTop','40px')
         }
       })
+      
 
 
       // 네비
@@ -97,13 +104,15 @@ $(document).ready(function(){
         $(this).removeClass('hover')
       }) 
  
-
+      // 엠디픽 옵션 버튼
       // mdPick btn
       $('#mdPick_wrap .btnBox .all').on('click',function(){
         $('.allInner').css({ display : 'flex' })
         $('.allBtn').css({ display : 'block' })
         $('.baseInner, .eyeInner, .lipInner').css({ display : 'none' })
         $('.baseBtn, .eyeBtn, .lipBtn').css({ display : 'none' })
+        $(this).addClass('active')
+        $('#mdPick_wrap .btnBox .base, #mdPick_wrap .btnBox .eye, #mdPick_wrap .btnBox .lip').removeClass('active')
       })
 
       $('#mdPick_wrap .btnBox .base').on('click',function(){
@@ -111,6 +120,8 @@ $(document).ready(function(){
         $('.baseBtn').css({ display : 'block' })
         $('.allInner, .eyeInner, .lipInner').css({ display : 'none' })
         $('.allBtn, .eyeBtn, .lipBtn').css({ display : 'none' })
+        $(this).addClass('active')
+        $('#mdPick_wrap .btnBox .all, #mdPick_wrap .btnBox .eye, #mdPick_wrap .btnBox .lip').removeClass('active')
       })
 
       $('#mdPick_wrap .btnBox .eye').on('click',function(){
@@ -118,6 +129,8 @@ $(document).ready(function(){
         $('.eyeBtn').css({ display : 'block' })
         $('.allInner, .baseInner, .lipInner').css({ display : 'none' })
         $('.allBtn, .baseBtn, .lipBtn').css({ display : 'none' })
+        $(this).addClass('active')
+        $('#mdPick_wrap .btnBox .all, #mdPick_wrap .btnBox .base, #mdPick_wrap .btnBox .lip').removeClass('active')
       })
 
       $('#mdPick_wrap .btnBox .lip').on('click',function(){
@@ -125,5 +138,7 @@ $(document).ready(function(){
         $('.lipBtn').css({ display : 'block' })
         $('.allInner, .baseInner, .eyeInner').css({ display : 'none' })
         $('.allBtn, .baseBtn, .eyeBtn').css({ display : 'none' })
+        $(this).addClass('active')
+        $('#mdPick_wrap .btnBox .all, #mdPick_wrap .btnBox .base, #mdPick_wrap .btnBox .eye').removeClass('active')
       })
 })
