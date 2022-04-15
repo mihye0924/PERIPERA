@@ -11,21 +11,37 @@ $(document).ready(function(){
 
 
     var periMood = new Swiper(".periMood", {
-      navigation: {
-        nextEl: ".periMood-button-next",
-        prevEl: ".periMood-button-prev",
+      // navigation: {
+      //   nextEl: ".periMood-button-next",
+      //   prevEl: ".periMood-button-prev",
+      // },
+      pagination: {
+        el: ".periMood-pagination",
+      },
+      autoplay: {
+        delay: 1000, 
+        disableOnInteraction: false
       },
       slidesPerView : 4,
       spaceBetween : 15,
+      on: {
+        init() {
+          this.el.addEventListener('mouseenter', () => {
+            this.autoplay.stop();
+          });
+    
+          this.el.addEventListener('mouseleave', () => {
+            this.autoplay.start();
+          });
+        }
+      }
     });
-
+ 
 
     // 메인 재생, 멈춤 버튼
     $('.main-pagination').append('<div class="playBtn active"><img src="../img/play.png" alt="재생"/></div>' +
     '<div class="pasueBtn"><img src="../img/pause.png" alt="멈춤"/></div>')
-
-
-    
+ 
     $('.playBtn').on('click', function(){
       console.log('중지')
       $(this).css('display','none')
@@ -52,12 +68,12 @@ $(document).ready(function(){
           $('header').addClass('fixed').css('borderBottom','1px solid #cccccc')
           $('header .gnb .logo').remove()
           $('header .gnb .shopping').before('<li class="logo"><a href="./peripera.html"><img src="./img/logo_peripera.png" alt="로고"></a></li>')
-          $('header .gnb>li span').css({ 'color':'#343434' , 'font-size':'20px'})
+          $('header .gnb>li span').css({ 'color':'#343434' , 'font-size':'18px'})
           $('header .product_sub>li, header .brand_sub>li, header .media_sub>li').css({'border':'1px solid rgb(224, 224, 224)'})
           $('header .search, header .gnb_wrap').css({ display:'flex'}) 
-          $('header .product_sub').css({marginLeft : '-15px'})
-          $('header .brand_sub').css({marginRight : '408px'})
-          $('header .media_sub').css({right : '252px'})
+          $('header .product_sub').css({marginLeft : '5px'})
+          $('header .brand_sub').css({marginRight : '390px'})
+          $('header .media_sub').css({right :'230px'})
           $('header .gnb_wrap').css('marginTop','0')
 
 
@@ -65,11 +81,11 @@ $(document).ready(function(){
           $('header').removeClass('fixed').css('borderBottom','0')
           $('header .gnb .logo').remove()
           $('header .gnb .product').after('<li class="logo"><a href="./peripera.html"><img src="./img/logo_peripera_white.png" alt="로고"></a></li>')
-          $('header .gnb li span').css({ 'color':'#fff' , 'font-size':'22px'})
+          $('header .gnb li span').css({ 'color':'#fff' , 'font-size':'18px'})
           $('header .product_sub>li, header .brand_sub>li, header .media_sub>li').css({'border':'0','border-bottom':'1px solid rgb(224, 224, 224)'})
           $('header .search').css('display','none')
-          $('header .brand_sub').css({marginRight : '250px'})
-          $('header .media_sub').css({right : '70px'})
+          $('header .brand_sub').css({marginRight : '275px'})
+          $('header .media_sub').css({right : '80px'})
           $('header .gnb_wrap').css('marginTop','40px')
         }
       })
@@ -103,6 +119,28 @@ $(document).ready(function(){
         $('.media_sub').slideUp()
         $(this).removeClass('hover')
       }) 
+
+
+      // 사이드 네비
+      $('#snb .snbBtn ul li.login').on('click',function(){
+        $('.snbBg').css({display:'block'})
+        $('#snb .snbBtn ul').css({
+          position : 'absolute',
+          right : '260px',
+          backgroundColor : '#fff',
+          zIndex : '2'
+        })
+      })
+
+
+
+
+
+
+
+
+
+
  
       // 엠디픽 옵션 버튼
       // mdPick btn
