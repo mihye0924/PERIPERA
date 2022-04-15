@@ -12,6 +12,7 @@
     font-style: normal;
 }
 
+body, html { z-index: -2; }
 a,p,span,h1,h2,h3,h4,h5,h6 { font-weight: 300;  text-decoration: none; font-size: 13px; color: #343434; font-family: 'MinSans-Medium'; letter-spacing: -2px; }
 li { list-style-type: none; }
  
@@ -75,7 +76,7 @@ main .main .btnBox .playBtn img,
 main .main .btnBox .pasueBtn img { object-fit: cover; position: absolute;  top: 50%; left: 50%; transform: translate(-50%,-50%); }
 main .main .btnBox .pasueBtn { display: none; }
 main .main .btnBox .main-pagination { position: relative; }
-main .main .swiper-slide { overflow: hidden; z-index: 1; }
+main .main .swiper-slide { overflow: hidden; z-index: 1; border: 1px solid transparent; }
 main .main .swiper-horizontal > .swiper-pagination-bullets,
 main .main .swiper-pagination-bullets.swiper-pagination-horizontal,
 main .main .swiper-pagination-custom, .swiper-pagination-fraction { width: 960px; height: 20px; line-height: 25px; margin: 0 auto; right: 0; left: inherit; text-align: right; }
