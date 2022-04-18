@@ -11,10 +11,10 @@ $(document).ready(function(){
 
 
     var periMood = new Swiper(".periMood", {
-      // navigation: {
-      //   nextEl: ".periMood-button-next",
-      //   prevEl: ".periMood-button-prev",
-      // },
+      navigation: {
+        nextEl: ".periMood-button-next",
+        prevEl: ".periMood-button-prev",
+      },
       pagination: {
         el: ".periMood-pagination",
       },
@@ -42,8 +42,7 @@ $(document).ready(function(){
     $('.main-pagination').append('<div class="playBtn active"><img src="./img/play.png" alt="재생"/></div>' +
     '<div class="pasueBtn"><img src="./img/pause.png" alt="멈춤"/></div>')
  
-    $('.playBtn').on('click', function(){
-      console.log('중지')
+    $('.playBtn').on('click', function(){ 
       $(this).css('display','none')
       $('.pasueBtn').css('display','inline-block')
       
