@@ -66,7 +66,7 @@
                     <iframe id="video" src="https://www.youtube.com/embed/uiRcKpBGhhw?amp;autoplay=1&amp;playlist=uiRcKpBGhhw&mute=1&amp;loop=1&amp;autopause=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="swiper-slide">
-                    <!-- <iframe id="video" src="https://www.youtube.com/embed/0Sp4gLXorgY?amp;autoplay=1&amp;playlist=0Sp4gLXorgY&mute=1&amp;loop=1&amp;autopause=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                    <iframe id="video" src="https://www.youtube.com/embed/0Sp4gLXorgY?amp;autoplay=1&amp;playlist=0Sp4gLXorgY&mute=1&amp;loop=1&amp;autopause=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
             <div class="btnBox">
@@ -75,56 +75,196 @@
         </div>    
     </main>
 
-    <div id="snb">
-        <div class="snbBtn">  
-            <ul>
-                <li class="login">
-                    <div class="loginBtn"> 
-                        <img src="./img/user.png" alt="마이페이지">
-                    </div>
-                    <div class="loginslide_wrap">
-
-                    </div>
-                </li>
-                <li class="cart">
-                    <div class="cartBtn">
-                        <img src="./img/cart.png" alt="장바구니">
-                        <div class="cartslide_wrap">
-
-                        </div>
-                    </div>
-                </li>
-                <li class="qna">
-                    <div class="qnaBtn">
-                        <img src="./img/service.png" alt="문의게시판">
-                 
-                        <div class="qna_wrap">
-
-                        </div>
-                    </div>
-                </li>
-                <li class="kakao">
-                    <div class="kakaoBtn"> 
-                            <img src="./img/kakao-talk.png" alt="카카오">
-                        <div class="kakaoslide_wrap">
-
-                        </div>
-                    </div>
-                </li>
-                <li class="top">
-                    <div class="topBtn">
-                        <a href="#">
-                            <img src="./img/top.png" alt="맨위로">
-                            <span>TOP</span>
-                        </a> 
-                    </div>
-                </li>
-            </ul> 
-            <div class="snbBg"></div>
-        </div>
-    </div>
+    
     <!-- 섹션 -->
     <div id="container"> 
+        <div id="snb">
+            <div class="snbSlide_wrap"> 
+                <div class="snbBg">
+                <div class="inner">
+                    <div class="login_wrap">
+                        <form action="">
+                            <ul>
+                                <li>
+                                    <span>아이디</span>
+                                    <input type="text" id="user_id">
+                                </li>
+                                <li>
+                                    <span>비밀번호</span>
+                                    <input type="password" id="user_password">
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>아이디찾기</span>
+                                        <span>비밀번호찾기</span>
+                                    </a>
+                                </li> 
+                                <li><input type="submit" id="login" value="로그인"></li>
+                                <li><input type="button" id="join" value="회원가입" ></li>
+                            </ul> 
+                        </form>
+
+                    </div> 
+                    <div class="cart_wrap"> 
+                        <div class="title"> 
+                            <h5>장바구니 목록</h5> 
+                            <a href="#"><span>더보기</span></a>
+                        </div>
+                        <ul class="cartList">
+                            <li>
+                                <a href="#">
+                                    <img src="./img/all01.jpg" alt="장바구니01">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./img/all02.jpg" alt="장바구니02">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./img/all03.jpg" alt="장바구니03">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./img/all04.jpg" alt="장바구니04">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./img/all05.jpg" alt="장바구니05">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./img/all06.jpg" alt="장바구니06">
+                                </a>
+                            </li>
+                        </ul> 
+
+                        <p class="border"></p>
+
+                        <div class="title"> 
+                            <h5>최근 본 목록</h5> 
+                            <a href="#"><span>더보기</span></a>
+                        </div>
+                        <ul class="recentList">
+                            <li>
+                                <a href="#">
+                                    <img src="./img/NEW01.jpg" alt="최근목록01">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./img/NEW02.jpg" alt="최근목록02">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="qna_wrap">
+                        <div class="title"> 
+                            <h5>공지사항</h5> 
+                            <a href="#"><span>더보기</span></a>
+                        </div>
+                        <ol class="notice">
+                            <li><a href="#"><span>회원 등급별 혜택</span></a></li> 
+                            <li><a href="#"><span>페리페라 100% 책임 환불제도</span></a></li> 
+                            <li><a href="#"><span>페리페라 신규 회원고객 혜택</span></a></li> 
+                            <li><a href="#"><span>3만원 이상 구매고객 포인트 지dddd급</span></a></li> 
+                            <li><a href="#"><span>5월 구매 사은품</span></a></li> 
+                        </ol>
+
+                        <div class="border"></div>
+                        <div class="title"> 
+                            <h5>QnA</h5> 
+                            <a href="#"><span>더보기</span></a>
+                        </div>
+                        <ol class="qna">
+                            <li>
+                                <a href="#">
+                                    <span>배송문의</span>
+                                    <span>조미혜</span>
+                                    <span>2022-09-24</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>환불문의</span>
+                                    <span>박수민</span>
+                                    <span>2022-02-03</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>기타문의</span>
+                                    <span>윤혜진</span>
+                                    <span>2022-10-15</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>배송문의</span>
+                                    <span>김나영</span>
+                                    <span>2022-02-18</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>환불문의</span>
+                                    <span>김나영</span>
+                                    <span>2022-05-25</span>
+                                </a>
+                            </li>
+                        </ol>
+                    </div> 
+                    <div class="customerBox">
+                        <ul>
+                            <li>
+                                <span>고객센터</span>
+                                <span>080-080-1510</span>
+                            </li>
+                            <li>
+                                <span>상담시간</span>
+                                <span>9:00 ~ 17:00</span>
+                            </li>
+                            <li>
+                                <span>점심시간</span>
+                                <span>12:30 ~ 13:30</span>
+                            </li>
+                            <li><span>( 토 / 일 공휴일 휴무 )</span></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                <div class="quickbar">
+                    <ul class="snbBtn">
+                        <li class="login"> 
+                            <img src="./img/user.png" id="mypage" alt="마이페이지"> 
+                        </li>
+                        <li class="cart"> 
+                            <img src="./img/cart.png" alt="장바구니"> 
+                        </li>
+                        <li class="qna"> 
+                            <img src="./img/qna.png" alt="문의게시판"> 
+                        </li>
+                        <li class="kakao"> 
+                            <img src="./img/kakao-talk.png" alt="카카오"> 
+                        </li>
+                        <li class="top">
+                            <div class="topBtn">
+                                <a href="javascript:void(0)" onclick="window.scrollTo({top:0,left:0,behavior:'smooth'})">
+                                    <img src="./img/top.png" alt="맨위로">
+                                    <span>TOP</span>
+                                </a> 
+                            </div>
+                        </li>
+                    </ul>  
+                </div> 
+            </div>
+        </div>
+
+        <div id="contentBox">  
         <!-- 베스트 상품 --> 
         <section id="bestProduct_wrap">
             <h1 class="mainTitle">BEST PRODUCT</h1>
@@ -746,6 +886,8 @@
                 </ul>
             </div>
         </section>
+        
+        </div>
     </div>
 
     <footer>
