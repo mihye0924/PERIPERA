@@ -130,52 +130,80 @@ $(document).ready(function(){
   
       $('#snb .snbBtn li:not(.kakao, .top)').on('click',function(){
   
-        if( on ){
+        if( on ){ 
           $('#snb').animate({right:'-261px'},1000) 
           $('#snb .snbSlide_wrap .snbBg').css({ boxShadow : 'unset'}) 
- 
+          $('#snb .snbBtn li.login').on('mouseover',function(){ 
+            $(this).removeClass('active')
+            loginImg.src='./img/user.png'
+          })
+          $('#snb .snbBtn li.cart').on('mouseover',function(){ 
+            $(this).removeClass('active')
+            cartImg.src='./img/cart.png'
+          })
+          $('#snb .snbBtn li.qna').on('mouseover',function(){ 
+            $(this).removeClass('active')
+            qnaImg.src='./img/qna.png'
+          })
+
           on = false 
 
 
         }else{
           $('#snb').animate({right:'0'},1000)
-          $('#snb .snbSlide_wrap .snbBg').css({ boxShadow : '5px -14px 10px #000'}) 
+            $('#snb .snbSlide_wrap .snbBg').css({ boxShadow : '5px -14px 10px #000'}) 
 
-          $('#snb li.login').on('mouseover',function(){ 
-          $('#snb li.login').addClass('active') 
-          $('#snb li.cart, #snb li.qna').removeClass('active')
-          $('#snb .login_wrap').css({ display:'block'})
-          $('#snb .cart_wrap, #snb .qna_wrap').css({ display:'none'})
-          loginImg.src ='./img/user_white.png'
-          cartImg.src='./img/cart.png'
-          qnaImg.src='./img/qna.png' 
+            $('#snb .snbBtn li.login').on('mouseover',function(){ 
+            $(this).addClass('active') 
+            $('#snb .snbBtn li.cart, #snb .snbBtn li.qna').removeClass('active')
+            $('#snb .login_wrap').css({ display:'block'})
+            $('#snb .cart_wrap, #snb .qna_wrap').css({ display:'none'})
+            loginImg.src ='./img/user_white.png'
+            cartImg.src='./img/cart.png'
+            qnaImg.src='./img/qna.png' 
           })
-          $('#snb li.cart').on('mouseover', function(){ 
-          $('#snb li.cart').addClass('active')
-          $('#snb li.login, #snb li.qna').removeClass('active') 
-          $('#snb .cart_wrap').css({ display:'block'})
-          $('#snb .login_wrap, #snb .qna_wrap').css({ display:'none'})
-          $('#snb li.login, #snb li.qna').removeClass('active')
-          cartImg.src='./img/cart_white.png'
-          loginImg.src='./img/user.png'
-          qnaImg.src='./img/qna.png'
+          $('#snb .snbBtn li.cart').on('mouseover', function(){ 
+            $(this).addClass('active')
+            $('#snb .snbBtn li.login, #snb .snbBtn li.qna').removeClass('active') 
+            $('#snb .cart_wrap').css({ display:'block'})
+            $('#snb .login_wrap, #snb .qna_wrap').css({ display:'none'})
+            $('#snb li.login, #snb li.qna').removeClass('active')
+            cartImg.src='./img/cart_white.png'
+            loginImg.src='./img/user.png'
+            qnaImg.src='./img/qna.png'
           })    
-          $('#snb li.qna').on('mouseover', function(){ 
-          $('#snb li.qna').addClass('active')
-          $('#snb li.login, #snb li.cart').removeClass('active')
-          $('#snb .qna_wrap').css({ display:'block'})
-          $('#snb .login_wrap, #snb .cart_wrap').css({ display:'none'})
-          $('#snb li.login, #snb li.cart').removeClass('active')
-          qnaImg.src='./img/qna_white.png'
-          cartImg.src='./img/cart.png'
-          loginImg.src='./img/user.png'
+          $('#snb .snbBtn li.qna').on('mouseover', function(){ 
+            $(this).addClass('active')
+            $('#snb .snbBtn li.login, #snb .snbBtn li.cart').removeClass('active')
+            $('#snb .qna_wrap').css({ display:'block'})
+            $('#snb .login_wrap, #snb .cart_wrap').css({ display:'none'})
+            $('#snb li.login, #snb li.cart').removeClass('active')
+            qnaImg.src='./img/qna_white.png'
+            cartImg.src='./img/cart.png'
+            loginImg.src='./img/user.png'
           })  
           on = true 
         }
       })
       
       $('#snb .snbSlide_wrap ul.snbBtn li.kakao').on('click', function(){
-        $('#snb').animate({right:'-261px'},1000)
+          $('#snb').animate({right:'-261px'},1000)
+
+          $('#snb').animate({right:'-261px'},1000) 
+          $('#snb .snbSlide_wrap .snbBg').css({ boxShadow : 'unset'}) 
+          $('#snb .snbBtn li.login').on('mouseover',function(){ 
+            $(this).removeClass('active')
+            loginImg.src='./img/user.png'
+          })
+          $('#snb .snbBtn li.cart').on('mouseover',function(){ 
+            $(this).removeClass('active')
+            cartImg.src='./img/cart.png'
+          })
+          $('#snb .snbBtn li.qna').on('mouseover',function(){ 
+            $(this).removeClass('active')
+            qnaImg.src='./img/qna.png'
+          }) 
+
         on = false
       }) 
 
