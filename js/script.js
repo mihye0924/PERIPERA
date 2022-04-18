@@ -39,8 +39,8 @@ $(document).ready(function(){
  
 
     // 메인 재생, 멈춤 버튼
-    $('.main-pagination').append('<div class="playBtn active"><img src="../img/play.png" alt="재생"/></div>' +
-    '<div class="pasueBtn"><img src="../img/pause.png" alt="멈춤"/></div>')
+    $('.main-pagination').append('<div class="playBtn active"><img src="./img/play.png" alt="재생"/></div>' +
+    '<div class="pasueBtn"><img src="./img/pause.png" alt="멈춤"/></div>')
  
     $('.playBtn').on('click', function(){
       console.log('중지')
