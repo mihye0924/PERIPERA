@@ -63,6 +63,8 @@ header input[type='image'] { width:30px; height: 30px; }
 #snb .snbSlide_wrap .quickbar { padding-top:312px; height: 100%;}
 #snb .snbSlide_wrap ul.snbBtn { position: sticky; top: 300px; }
 #snb .snbSlide_wrap ul.snbBtn li { cursor: pointer; background-color: #fff; margin-top: -1px; position: relative; width: 50px; height: 50px;  border: 1px solid #bebebe;  }
+#snb .snbSlide_wrap ul.snbBtn li.login { border-radius: 10px 0 0 0; }
+#snb .snbSlide_wrap ul.snbBtn li.top { border-radius: 0 0 0 10px; }
 #snb .snbSlide_wrap ul.snbBtn li.active { background-color: var(--bgcolor); }
 #snb .snbSlide_wrap ul.snbBtn li a { display: block; }
 #snb .snbSlide_wrap ul.snbBtn li span { color: #343434; }
