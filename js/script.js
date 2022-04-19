@@ -1,5 +1,19 @@
 $(document).ready(function(){ 
 
+    // 마우스 포인터 감지 - 립스틱 포인터 작게 바꾸기
+    $(document).on('mousemove', function(e) {
+      let pageX = e.pageX 
+      let windowWidth = $(window).width() 
+
+      if(windowWidth - 130 <= pageX) {
+        $('body').addClass('mini')
+      } else {
+        $('body').removeClass('mini')
+      } 
+
+    })
+
+
     // 메인 슬라이드
     var main = new Swiper(".main", {
         pagination: {
@@ -111,70 +125,41 @@ $(document).ready(function(){
       }) 
 
 
-      // 사이드 네비
-      var on = false  
+      // 사이드 네비   
   
       var loginImg = document.querySelector(".login > img");
       var cartImg = document.querySelector(".cart > img");
-      var qnaImg = document.querySelector(".qna > img");
-  
-      $('#snb .snbBtn li:not(.kakao, .top)').on('click',function(){
-  
-        if( on ){ 
-          $('#snb').animate({right:'-261px'},1000) 
-          $('#snb .snbSlide_wra').css({ boxShadow : 'unset'}) 
-          $('#snb .snbBtn li.login').on('mouseover',function(){ 
-            $(this).removeClass('active')
-            loginImg.src='./img/user.png'
-          })
-          $('#snb .snbBtn li.cart').on('mouseover',function(){ 
-            $(this).removeClass('active')
-            cartImg.src='./img/cart.png'
-          })
-          $('#snb .snbBtn li.qna').on('mouseover',function(){ 
-            $(this).removeClass('active')
-            qnaImg.src='./img/qna.png'
-          })
+      var qnaImg = document.querySelector(".qna > img"); 
 
-          on = false 
-
-
-        }else{
-          $('#snb').animate({right:'0'},1000)
-            $('#snb .snbSlide_wrap').css({ boxShadow : '5px -14px 10px #000'}) 
-
-            $('#snb .snbBtn li.login').on('mouseover',function(){ 
-            $(this).addClass('active')
-            $('#snb .snbBtn li.cart, #snb .snbBtn li.qna').removeClass('active')
-            $('#snb .login_wrap').css({ display:'block'})
-            $('#snb .cart_wrap, #snb .qna_wrap').css({ display:'none'}) 
-            loginImg.src ='./img/user_white.png'
-            cartImg.src='./img/cart.png'
-            qnaImg.src='./img/qna.png' 
-          })
-          $('#snb .snbBtn li.cart').on('mouseover', function(){ 
-            $(this).addClass('active')
-            $('#snb .snbBtn li.login, #snb .snbBtn li.qna').removeClass('active') 
-            $('#snb .cart_wrap').css({ display:'block'})
-            $('#snb .login_wrap, #snb .qna_wrap').css({ display:'none'})
-            $('#snb li.login, #snb li.qna').removeClass('active')
-            cartImg.src='./img/cart_white.png'
-            loginImg.src='./img/user.png'
-            qnaImg.src='./img/qna.png'
-          })    
-          $('#snb .snbBtn li.qna').on('mouseover', function(){ 
-            $(this).addClass('active')
-            $('#snb .snbBtn li.login, #snb .snbBtn li.cart').removeClass('active')
-            $('#snb .qna_wrap').css({ display:'block'})
-            $('#snb .login_wrap, #snb .cart_wrap').css({ display:'none'})
-            $('#snb li.login, #snb li.cart').removeClass('active')
-            qnaImg.src='./img/qna_white.png'
-            cartImg.src='./img/cart.png'
-            loginImg.src='./img/user.png'
-          })  
-          on = true 
-        }
+      $('.quickbar-bg').on('click',function(){
+        $('#snb').animate({right:'-261px'},1000) 
+        $('#snb .snbSlide_wra').css({ boxShadow : 'unset'}) 
+        $('#snb .snbBtn li').removeClass('active')
+        $('.quickbar-bg').removeClass('active')
       })
+    
+
+      $('#snb .snbBtn li:not(.kakao, .top)').on('click',function(){
+        $('#snb').animate({right:'0'},1000)
+          $('#snb .snbSlide_wrap').css({ boxShadow : '5px -14px 10px #000'}) 
+          $('#snb .snbBtn li').removeClass('active')
+          $(this).addClass('active')
+          $('.quickbar-bg').addClass('active') 
+      })
+ 
+      $('#snb .snbBtn li.login').on('click',function(){  
+          $('#snb .login_wrap').css({ display:'block'})
+          $('#snb .cart_wrap, #snb .qna_wrap').css({ display:'none'})  
+        })
+      $('#snb .snbBtn li.cart').on('click', function(){  
+        $('#snb .cart_wrap').css({ display:'block'})
+        $('#snb .login_wrap, #snb .qna_wrap').css({ display:'none'}) 
+      })    
+      $('#snb .snbBtn li.qna').on('click', function(){  
+        $('#snb .qna_wrap').css({ display:'block'})
+        $('#snb .login_wrap, #snb .cart_wrap').css({ display:'none'}) 
+      }) 
+      
       
       $('#snb .snbSlide_wrap ul.snbBtn li.kakao').on('click', function(){
           $('#snb').animate({right:'-261px'},1000)
@@ -193,8 +178,7 @@ $(document).ready(function(){
             $(this).removeClass('active')
             qnaImg.src='./img/qna.png'
           }) 
-
-        on = false
+ 
       }) 
 
 
