@@ -57,14 +57,14 @@ header .gnb_wrap_clone { display: none; }
 header .gnb_wrap_clone.fixed {  border-bottom: 1px solid #bebebe; display: block; width: 100%; height: 60px; position: fixed; z-index: 3; top: 0; animation: slideDown 1s ease-in-out; background-color: #fff; }
 header .gnb_wrap_clone.fixed span { color: #343434; }
 header .gnb_wrap_clone .product_sub, header .gnb_wrap_clone .brand_sub, header .gnb_wrap_clone .media_sub { border: 1px solid rgb(224, 224, 224); margin: 17px 0 0 -32px; }
-header .gnb_wrap_clone .gnb { width: 1140px; height: 60px; margin: 0 auto; padding: 0 60px; justify-content: space-between; }
+header .gnb_wrap_clone .gnb { position: relative; width: 1140px; height: 60px; margin: 0 auto; padding: 0 60px; justify-content: space-between; }
 header .gnb_wrap_clone .search { position: relative; } 
 header .gnb_wrap_clone .search form { display:flex; align-items: center; padding-right: 10px; }
 header .gnb_wrap_clone .search::before { position: absolute; content: ''; width: 1px; height: 30px; background-color: #cccccc; top: 3px; }
 header .gnb_wrap_clone .search::after { position: absolute; content:''; width: 1px; height: 30px; background-color: #cccccc; right: 0; top: 3px; } 
 header .gnb_wrap_clone input[type='text'] { width: 140px; height: 35px; padding: 0 10px; border: 0; background-color: transparent; float: left; }
 header .gnb_wrap_clone input[type='image'] { width:25px; height: 25px; } 
-header .gnb_wrap_clone .media_sub { right: 327px; }
+header .gnb_wrap_clone .media_sub { right: 275px; }
 
 
 
@@ -368,13 +368,13 @@ footer #footer_wrap .inner_right #optionList { width: 120px; height: 30px; borde
     main .main .main_wrap #video { width: 200%; height: 100%; }
 
     /* header clone */
-    header .gnb_wrap_clone .gnb { width: 768px; padding: 0 20px; }
+    header .gnb_wrap_clone .gnb {  width: 768px; padding: 0 20px; }
     header .gnb_wrap_clone .search::before { top: 3px; height: 20px; }
     header .gnb_wrap_clone .search::after { top: 3px; height: 20px; right: 0;  }
     header .gnb_wrap_clone .search form { width: 145px; }
     header .gnb_wrap_clone input[type='text'] { width: 100px; height: 25px; }
     header .gnb_wrap_clone .product_sub, header .gnb_wrap_clone .brand_sub, header .gnb_wrap_clone .media_sub { margin: 19px 0 0 -10px; }
-    header .gnb_wrap_clone .media_sub { right:  360px; }
+    header .gnb_wrap_clone .media_sub { right:  185px; }
 
 
 
