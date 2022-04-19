@@ -18,22 +18,31 @@ $(document).ready(function(){
       pagination: {
         el: ".periMood-pagination",
       },
-      autoplay: {
-        delay: 1000, 
-        disableOnInteraction: false
-      },
-      slidesPerView : 4,
-      spaceBetween : 15,
-      on: {
-        init() {
-          this.el.addEventListener('mouseenter', () => {
-            this.autoplay.stop();
-          });
+      // autoplay: {
+      //   // delay: 1000, 
+      //   // disableOnInteraction: false
+      // },
+     
+      // on: {
+      //   init() {
+      //     this.el.addEventListener('mouseenter', () => {
+      //       this.autoplay.stop();
+      //     });
     
-          this.el.addEventListener('mouseleave', () => {
-            this.autoplay.start();
-          });
-        }
+      //     this.el.addEventListener('mouseleave', () => {
+      //       this.autoplay.start();
+      //     });
+      //   }
+      // },
+      breakpoints: {
+        1160:{
+          slidesPerView : 4,
+          spaceBetween : 15,
+        },
+        768: {
+          slidesPerView: 3, 
+          spaceBetween: 15
+         }
       }
     });
  
@@ -58,34 +67,16 @@ $(document).ready(function(){
 
     // 메인 넘어갈때 fixed gnb
     var height = $('main').height()
+    var width = $(window).width()
+    console.log(width)
     // console.log(height,'높이') 
 
     $(window).on('scroll',function(){
-      var top = $(this).scrollTop() 
-      // console.log(top,'스크롤')
+      var top = $(this).scrollTop()  
       if( top > height ) {   
-          $('header').addClass('fixed').css({'borderBottom':'1px solid #cccccc','z-index':'4'})
-          $('header .gnb .logo').remove()
-          $('header .gnb .shopping').before('<li class="logo"><a href="./peripera.html"><img src="./img/logo_peripera.png" alt="로고"></a></li>')
-          $('header .gnb>li span').css({ 'color':'#343434' , 'font-size':'18px'})
-          $('header .product_sub>li, header .brand_sub>li, header .media_sub>li').css({'border':'1px solid rgb(224, 224, 224)'})
-          $('header .search, header .gnb_wrap').css({ display:'flex'}) 
-          $('header .product_sub').css({marginLeft : '5px'})
-          $('header .brand_sub').css({marginRight : '390px'})
-          $('header .media_sub').css({right :'230px'})
-          $('header .gnb_wrap').css('marginTop','0')
-
-
+          $('header .gnb_wrap_clone').addClass('fixed')
         }else{
-          $('header').removeClass('fixed').css({'borderBottom':'0','z-index':'3'})
-          $('header .gnb .logo').remove()
-          $('header .gnb .product').after('<li class="logo"><a href="./peripera.html"><img src="./img/logo_peripera_white.png" alt="로고"></a></li>')
-          $('header .gnb li span').css({ 'color':'#fff' , 'font-size':'18px'})
-          $('header .product_sub>li, header .brand_sub>li, header .media_sub>li').css({'border':'0','border-bottom':'1px solid rgb(224, 224, 224)'})
-          $('header .search').css('display','none')
-          $('header .brand_sub').css({marginRight : '275px'})
-          $('header .media_sub').css({right : '80px'})
-          $('header .gnb_wrap').css('marginTop','40px')
+          $('header .gnb_wrap_clone').removeClass('fixed')
         }
       })
       
