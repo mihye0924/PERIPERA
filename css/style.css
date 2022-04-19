@@ -222,11 +222,11 @@ main .main .loginslide_wrap { position: sticky; top: 130px; height: 720px; margi
 #periMood_wrap .content li a { width: 280px; height: 300px; display: block; overflow: hidden;   } 
 #periMood_wrap .content li:hover a { animation: mood 1s ease-in-out; position: absolute; top: 0px; background-color: rgba(0, 0, 0, 0.471);}
 #periMood_wrap .content li span { position: absolute; left: 20px; bottom: 20px; z-index: 1; font-size: 20px; line-height:1.2; text-align: left; color: #fff; }
+#periMood_wrap .content li span:last-of-type { left: 50px; }
 #periMood_wrap .content li::after { display: block; position: absolute; content: ''; bottom: 0; width: 245px; height: 130px; background: linear-gradient( transparent, rgba(0, 0, 0, 0.63) ) }
 #periMood_wrap .content li:hover a span:nth-of-type(1) { display: none; } 
-#periMood_wrap .content li:hover a span:nth-of-type(2) { display: block; font-size: 18px; }
-#periMood_wrap .content li:hover a span:nth-of-type(2)::before { position: absolute; content: ''; width: 50px; height: 2px; background-color: #fff; margin: 1px 0 0 152px; transform: rotate(20deg); }
-#periMood_wrap .content li:hover a span:nth-of-type(2)::after { position: absolute; content: ''; width: 130px; height: 2px; background-color: #fff; margin: 10px 0 0 15px; }
+#periMood_wrap .content li:hover a span:nth-of-type(2) { display: block; font-size: 18px; } 
+#periMood_wrap .content li:hover a span:nth-of-type(2)::before { position: absolute; margin: 0px  0  0 -30px; content: ''; width: 20px; height: 20px; border-radius: 25px; border:1px solid #fff; background: url(../img/arrow.png) no-repeat center; background-size: contain; }
 #periMood_wrap .content li:hover a span:nth-of-type(2):hover { color:  var(--bgcolor); }
 #periMood_wrap .content li span:nth-of-type(2) { display: none; } 
 @keyframes mood { 0% { top: -300px; } 100%{ top: 0; } }
@@ -367,8 +367,8 @@ footer #footer_wrap .inner_right #optionList { width: 120px; height: 30px; borde
 
 
     /* best_wrap */
-    .mainTitle { font-size: 24px; }
-    .subTitle { font-size: 14px; }
+    .mainTitle { font-size: 28px; }
+    .subTitle { font-size: 17px; }
     #container #contentBox { width: 100%; }
     #bestProduct_wrap { margin: 0 20px; }
     #bestProduct_wrap ul li { width: 24%; height: 295px; }
@@ -378,30 +378,29 @@ footer #footer_wrap .inner_right #optionList { width: 120px; height: 30px; borde
     /* newProduct_wrap */
     #newProduct_wrap .content { width: 100%; margin: 80px 0 0 0; padding: 0 20px; }
     #newProduct_wrap .content ul { grid-template-rows: 200px 200px; grid-template-columns: 35% 32% 30%; } 
-    #newProduct_wrap .content ul li:hover p { font-size: 14px; }
+    #newProduct_wrap .content ul li:hover p { font-size: 17px; }
     #newProduct_wrap .content ul li:hover span { width: 100px; height: 30px; line-height: 30px; }
     
 
     /* periMood_wrap */
     #periMood_wrap { padding: 0 20px; }
     #periMood_wrap .content li { height: 335px; }
+    #periMood_wrap .content li::after { width: 100%; }
     #periMood_wrap .content li a { width: 100%; height: 335px; }
     #periMood_wrap .content li span { font-size: 24px; }
     #periMood_wrap .content li:hover a span:nth-of-type(2) { font-size: 18px; }
-    #periMood_wrap .content li:hover a span:nth-of-type(2)::before { margin: 3px 0 0 167px; width: 40px; }
-    #periMood_wrap .content li:hover a span:nth-of-type(2)::after { width: 148px; }
-    #periMood_wrap .content li::after { width: 100%; }
+    #periMood_wrap .content li:hover a span:nth-of-type(2)::before { margin: -2px  0  0 -30px; } 
 
     /* mdPick_wrap */
     #mdPick_wrap { padding: 0 20px; }
     #mdPick_wrap .btnBox .all.active, #mdPick_wrap .btnBox .base.active, #mdPick_wrap .btnBox .eye.active, #mdPick_wrap .btnBox .lip.active { padding: 5px 20px; }
     #mdPick_wrap .btnBox .all, #mdPick_wrap .btnBox .base, #mdPick_wrap .btnBox .eye, #mdPick_wrap .btnBox .lip { padding: 5px 20px; }
     #mdPick_wrap .content li { width: calc(96%/3); height: 390px; }
-    #mdPick_wrap .content li p { font-size: 18px; }
-    #mdPick_wrap .content li span { font-size: 18px; }
+    #mdPick_wrap .content li p { font-size: 17px; }
+    #mdPick_wrap .content li span { font-size: 17px; }
     #mdPick_wrap .content li img { height: 300px; }
-    #mdPick_wrap .content .allBtn, #mdPick_wrap .content .baseBtn, #mdPick_wrap .content .eyeBtn, #mdPick_wrap .content .lipBtn { width: 145px; height: 30px; }
-    #mdPick_wrap .content .allBtn span, #mdPick_wrap .content .baseBtn span, #mdPick_wrap .content .eyeBtn span, #mdPick_wrap .content .lipBtn span { width: 145px; height: 30px; line-height: 30px; }
+    #mdPick_wrap .content .allBtn, #mdPick_wrap .content .baseBtn, #mdPick_wrap .content .eyeBtn, #mdPick_wrap .content .lipBtn { width: 165px; height: 35px; }
+    #mdPick_wrap .content .allBtn span, #mdPick_wrap .content .baseBtn span, #mdPick_wrap .content .eyeBtn span, #mdPick_wrap .content .lipBtn span { width: 165px; height: 35px; line-height: 35px; }
 
     /* banner_wrap */
     #banner_wrap { padding: 0 20px; }
