@@ -49,7 +49,7 @@ $(document).ready(function(){
       //   }
       // },
       breakpoints: {
-        1160:{
+        1024:{
           slidesPerView : 4,
           spaceBetween : 15,
         },
