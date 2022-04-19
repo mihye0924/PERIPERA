@@ -64,7 +64,7 @@ $(document).ready(function(){
       var top = $(this).scrollTop() 
       // console.log(top,'스크롤')
       if( top > height ) {   
-          $('header').addClass('fixed').css('borderBottom','1px solid #cccccc')
+          $('header').addClass('fixed').css({'borderBottom':'1px solid #cccccc','z-index':'4'})
           $('header .gnb .logo').remove()
           $('header .gnb .shopping').before('<li class="logo"><a href="./peripera.html"><img src="./img/logo_peripera.png" alt="로고"></a></li>')
           $('header .gnb>li span').css({ 'color':'#343434' , 'font-size':'18px'})
@@ -77,7 +77,7 @@ $(document).ready(function(){
 
 
         }else{
-          $('header').removeClass('fixed').css('borderBottom','0')
+          $('header').removeClass('fixed').css({'borderBottom':'0','z-index':'3'})
           $('header .gnb .logo').remove()
           $('header .gnb .product').after('<li class="logo"><a href="./peripera.html"><img src="./img/logo_peripera_white.png" alt="로고"></a></li>')
           $('header .gnb li span').css({ 'color':'#fff' , 'font-size':'18px'})
@@ -131,7 +131,7 @@ $(document).ready(function(){
   
         if( on ){ 
           $('#snb').animate({right:'-261px'},1000) 
-          $('#snb .snbSlide_wrap .snbBg').css({ boxShadow : 'unset'}) 
+          $('#snb .snbSlide_wra').css({ boxShadow : 'unset'}) 
           $('#snb .snbBtn li.login').on('mouseover',function(){ 
             $(this).removeClass('active')
             loginImg.src='./img/user.png'
@@ -150,13 +150,13 @@ $(document).ready(function(){
 
         }else{
           $('#snb').animate({right:'0'},1000)
-            $('#snb .snbSlide_wrap .snbBg').css({ boxShadow : '5px -14px 10px #000'}) 
+            $('#snb .snbSlide_wrap').css({ boxShadow : '5px -14px 10px #000'}) 
 
             $('#snb .snbBtn li.login').on('mouseover',function(){ 
-            $(this).addClass('active') 
+            $(this).addClass('active')
             $('#snb .snbBtn li.cart, #snb .snbBtn li.qna').removeClass('active')
             $('#snb .login_wrap').css({ display:'block'})
-            $('#snb .cart_wrap, #snb .qna_wrap').css({ display:'none'})
+            $('#snb .cart_wrap, #snb .qna_wrap').css({ display:'none'}) 
             loginImg.src ='./img/user_white.png'
             cartImg.src='./img/cart.png'
             qnaImg.src='./img/qna.png' 
@@ -189,7 +189,7 @@ $(document).ready(function(){
           $('#snb').animate({right:'-261px'},1000)
 
           $('#snb').animate({right:'-261px'},1000) 
-          $('#snb .snbSlide_wrap .snbBg').css({ boxShadow : 'unset'}) 
+          $('#snb .snbSlide_wrap').css({ boxShadow : 'unset'}) 
           $('#snb .snbBtn li.login').on('mouseover',function(){ 
             $(this).removeClass('active')
             loginImg.src='./img/user.png'

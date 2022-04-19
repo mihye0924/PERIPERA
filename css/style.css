@@ -12,14 +12,14 @@
     font-style: normal;
 }
 :root { --bgcolor:#fb4b89e4; }
- 
-body { z-index: -2; overflow-x: hidden; cursor: url('../img/periperalipstick.png'),auto }
+body{ z-index: -2; overflow-x: hidden; }
+body,a,button,input {  cursor: url('../img/periperalipstick.png'),auto }
 
 a,p,span,h1,h2,h3,h4,h5,h6 { font-weight: 300;  text-decoration: none; font-size: 13px; color: #343434; font-family: 'MinSans-Medium'; letter-spacing: -2px; }
 li { list-style-type: none; }
  
 /* header */
-header { position: absolute; z-index: 6; width:100%; } 
+header { position: absolute; z-index: 3; width:100%; } 
 header.fixed { position: fixed; top: 0; animation: slideDown 1s ease-in-out; background-color: #fff; }
 @keyframes slideDown { 0%{ top: -120px; } 100% { top: 0; } } 
 header .gnb_wrap { position: relative; width: 1140px; margin: 0 auto; height: 80px; margin-top: 40px; padding: 0 60px; }
@@ -27,7 +27,7 @@ header .gnb { display: flex; justify-content: space-around; align-items: center;
 header .logo { width: 140px; height: 45px; }
 header .logo a { display: block; }
 header .logo img { width: 100%; height: 100%; }
-header .gnb>li span { letter-spacing: -1px; cursor: pointer; font-size: 18px; font-weight: 900; color: #fff; padding: 27px 45px; box-sizing: border-box; }
+header .gnb>li span { letter-spacing: -1px; font-size: 18px; font-weight: 900; color: #fff; padding: 27px 45px; box-sizing: border-box; }
 header .gnb>li.hover span { color: var(--bgcolor) !important;}
 header .gnb>li.shopping:hover span { color: var(--bgcolor) !important;}
 header .gnb li.hover > .product_sub,
@@ -59,51 +59,50 @@ header input[type='image'] { width:30px; height: 30px; }
 
 
 /* 사이드바 */
-#snb { position: fixed; width: 309px; height: 100%; z-index: 3; right:-261px; }
-#snb .snbSlide_wrap { position: absolute; width: 100%; height: 100%; }
-#snb .snbSlide_wrap .snbBg { width: 260px; right: 0; height: 100%; background-color: #fff; position: absolute; border-left: 1px solid #bebebe; }
-#snb .snbSlide_wrap .quickbar { padding-top:312px; height: 100%;}
-#snb .snbSlide_wrap ul.snbBtn { position: sticky; top: 300px; }
-#snb .snbSlide_wrap ul.snbBtn li { cursor: pointer; background-color: #fff; margin-top: -1px; position: relative; width: 50px; height: 50px;  border: 1px solid #bebebe;  }
-#snb .snbSlide_wrap ul.snbBtn li:not(.kakao,.top) img:last-child { display: none; }
-#snb .snbSlide_wrap ul.snbBtn li.login { border-radius: 10px 0 0 0; }
-#snb .snbSlide_wrap ul.snbBtn li.top { border-radius: 0 0 0 10px; }
-#snb .snbSlide_wrap ul.snbBtn li.login:hover,
-#snb .snbSlide_wrap ul.snbBtn li.login:active,
-#snb .snbSlide_wrap ul.snbBtn li.cart:hover,
-#snb .snbSlide_wrap ul.snbBtn li.cart:active,
-#snb .snbSlide_wrap ul.snbBtn li.qna:hover,
-#snb .snbSlide_wrap ul.snbBtn li.qna:active { background-color: var(--bgcolor); }
-#snb .snbSlide_wrap ul.snbBtn li.login:hover img:first-of-type,
-#snb .snbSlide_wrap ul.snbBtn li.login:active img:first-of-type,
-#snb .snbSlide_wrap ul.snbBtn li.cart:hover img:first-of-type,
-#snb .snbSlide_wrap ul.snbBtn li.cart:active img:first-of-type,
-#snb .snbSlide_wrap ul.snbBtn li.qna:hover img:first-of-type,
-#snb .snbSlide_wrap ul.snbBtn li.qna:active img:first-of-type  { display: none; }
-#snb .snbSlide_wrap ul.snbBtn li.login:hover img:last-of-type,
-#snb .snbSlide_wrap ul.snbBtn li.login:active img:last-of-type,
-#snb .snbSlide_wrap ul.snbBtn li.cart:hover img:last-of-type,
-#snb .snbSlide_wrap ul.snbBtn li.cart:active img:last-of-type,
-#snb .snbSlide_wrap ul.snbBtn li.qna:hover img:last-of-type,
-#snb .snbSlide_wrap ul.snbBtn li.qna:active img:last-of-type { display: block; }
-#snb .snbSlide_wrap ul.snbBtn li.active { background-color: var(--bgcolor); }
-#snb .snbSlide_wrap ul.snbBtn li a { display: block; }
-#snb .snbSlide_wrap ul.snbBtn li span { color: #343434; }
-#snb .snbSlide_wrap ul.snbBtn li img {  display:block; width: 25px; height: 25px; margin: 12px auto; line-height: 1.2; }
-#snb .snbSlide_wrap ul.snbBtn li.top .topBtn { position: absolute; width: 100%; height: 100%; top: 55%; left: 50%; transform: translate(-50%,-50%); }
-#snb .snbSlide_wrap ul.snbBtn li.top img { width: 35px; height: 35px; margin: 7px auto; }
-#snb .snbSlide_wrap ul.snbBtn li.top .topBtn span { font-size: 12px; letter-spacing: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: #fff; } 
-#snb .snbSlide_wrap .inner { position: sticky; margin: 75px 0; top: 130px; height: 745px; z-index: 2; }
-#snb .snbSlide_wrap .inner form { width: 200px; margin: 0 auto; }
+#snb { position: fixed; width: 309px; height: 100%; z-index: 3; right:-261px; } 
+#snb .quickbar { padding-top:312px; height: 100%;} 
+#snb .quickbar  ul.snbBtn li {  cursor: url('../img/periperalipstick.png'),auto; background-color: #fff; margin-top: -1px; position: relative; width: 50px; height: 50px;  border: 1px solid #bebebe;  }
+#snb .quickbar  ul.snbBtn li:not(.kakao,.top) img:last-child { display: none; }
+#snb .quickbar  ul.snbBtn li.login { border-radius: 10px 0 0 0; }
+#snb .quickbar  ul.snbBtn li.top { border-radius: 0 0 0 10px; }
+#snb .quickbar  ul.snbBtn li.login:hover,
+#snb .quickbar  ul.snbBtn li.login:active,
+#snb .quickbar  ul.snbBtn li.cart:hover,
+#snb .quickbar  ul.snbBtn li.cart:active,
+#snb .quickbar  ul.snbBtn li.qna:hover,
+#snb .quickbar  ul.snbBtn li.qna:active { background-color: var(--bgcolor);  }
+#snb .quickbar  ul.snbBtn li.login:hover img:first-of-type,
+#snb .quickbar  ul.snbBtn li.login:active img:first-of-type,
+#snb .quickbar  ul.snbBtn li.cart:hover img:first-of-type,
+#snb .quickbar  ul.snbBtn li.cart:active img:first-of-type,
+#snb .quickbar  ul.snbBtn li.qna:hover img:first-of-type,
+#snb .quickbar  ul.snbBtn li.qna:active img:first-of-type  { display: none; }
+#snb .quickbar  ul.snbBtn li.login:hover img:last-of-type,
+#snb .quickbar  ul.snbBtn li.login:active img:last-of-type,
+#snb .quickbar  ul.snbBtn li.cart:hover img:last-of-type,
+#snb .quickbar  ul.snbBtn li.cart:active img:last-of-type,
+#snb .quickbar  ul.snbBtn li.qna:hover img:last-of-type,
+#snb .quickbar  ul.snbBtn li.qna:active img:last-of-type { display: block; }
+#snb .quickbar  ul.snbBtn li.active { background-color: var(--bgcolor); }
+#snb .quickbar  ul.snbBtn li a { display: block; }
+#snb .quickbar  ul.snbBtn li span { color: #343434; }
+#snb .quickbar  ul.snbBtn li img {  display:block; width: 25px; height: 25px; margin: 12px auto; line-height: 1.2; }
+#snb .quickbar  ul.snbBtn li.top .topBtn { position: absolute; width: 100%; height: 100%; top: 55%; left: 50%; transform: translate(-50%,-50%); }
+#snb .quickbar  ul.snbBtn li.top img { width: 35px; height: 35px; margin: 7px auto; }
+#snb .quickbar  ul.snbBtn li.top .topBtn span { font-size: 12px; letter-spacing: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: #fff; } 
+#snb .snbSlide_wrap { width: 260px; right: 0; height: 100%; background-color: #fff; position: absolute; border-left: 1px solid #bebebe; }
+#snb .snbSlide_wrap .inner { position: sticky; margin: 110px 0; top: 130px; height: 745px; z-index: 2; }
+#snb .snbSlide_wrap .inner form { width: 200px; margin: 0 auto; } 
 #snb .snbSlide_wrap .login_wrap form ul li { margin: 5px 0; }
 #snb .snbSlide_wrap .login_wrap form ul li span { display: inline-block; width: 48px; }
 #snb .snbSlide_wrap .login_wrap form ul li:nth-of-type(3) { display: flex; justify-content: end; }
 #snb .snbSlide_wrap .login_wrap form ul li:nth-of-type(3) span { width: 60px; font-size: 12px; }
+#snb .snbSlide_wrap .login_wrap form ul li:nth-of-type(3) span:hover { color:red }
 #snb .snbSlide_wrap .login_wrap form ul>li:nth-of-type(3) span:first-of-type::after { content: ''; width: 1px; height: 12px; display: inline-block; margin: 0px 0px -2px 10px; background-color: #cecece; }
 #snb .snbSlide_wrap .login_wrap form input#user_id,
 #snb .snbSlide_wrap .login_wrap form input#user_password { padding:  0 10px; width: 140px; height: 30px; border: 1px solid #cecece; border-radius: 5px; }
 #snb .snbSlide_wrap .login_wrap form input[id='login'],
-#snb .snbSlide_wrap .login_wrap form input[id='join'] { cursor: pointer; font-family: 'MinSans-Medium'; width: 195px; height: 35px; background-color: var(--bgcolor); color: #fff; border-radius: 5px; border: 0; }
+#snb .snbSlide_wrap .login_wrap form input[id='join'] { font-family: 'MinSans-Medium'; width: 195px; height: 35px; background-color: var(--bgcolor); color: #fff; border-radius: 5px; border: 0; }
 #snb .snbSlide_wrap .login_wrap form input[id='join']  { background-color: #fff; border: 1px solid var(--bgcolor); color: #343434; }
 #snb .snbSlide_wrap .login_wrap form input#user_id,
 #snb .snbSlide_wrap .login_wrap form input#user_password { outline: none; }
@@ -116,9 +115,10 @@ header input[type='image'] { width:30px; height: 30px; }
 #snb .snbSlide_wrap .cart_wrap .title h5::after,
 #snb .snbSlide_wrap .qna_wrap .title h5::after { margin: -3px 0px 0px 3px; content: ''; width: 5px; height: 5px; background-color: var(--bgcolor); border-radius: 25px; position: absolute; }
 #snb .snbSlide_wrap .cart_wrap .title span,
-#snb .snbSlide_wrap .qna_wrap .title span { float: right; }
+#snb .snbSlide_wrap .qna_wrap .title span { float: right; cursor: url('../img/periperalipstick.png'),auto; }
 #snb .snbSlide_wrap .cart_wrap ul { display: flex; flex-wrap: wrap; width: 202px; justify-content: space-between; margin: 0 auto; }
 #snb .snbSlide_wrap .cart_wrap li { width: 90px; height: 90px; margin: 5px; border-radius: 5px; overflow: hidden; }
+#snb .snbSlide_wrap .cart_wrap li a { display: block; }
 #snb .snbSlide_wrap .cart_wrap li img { width: 100%; height: 100%; }
 #snb .snbSlide_wrap .border { width: 200px; height: 1px; background-color: #bebebe;  margin: 40px auto; }
 #snb .snbSlide_wrap .qna_wrap .notice,
@@ -133,7 +133,7 @@ header input[type='image'] { width:30px; height: 30px; }
 #snb .snbSlide_wrap .qna_wrap .qna li span { letter-spacing: 0; font-size: 12px; }
 #snb .snbSlide_wrap .qna_wrap .qna li span:first-child { margin-right:19px; }
 #snb .snbSlide_wrap .qna_wrap .qna li span:last-child { margin-left:10px; }
-#snb .snbSlide_wrap .customerBox { width: 200px; position:absolute; bottom: 0; left: 30px; }
+#snb .snbSlide_wrap .customerBox { width: 200px; position:absolute; bottom: 0; left: 30px; z-index: -1; }
 #snb .snbSlide_wrap .customerBox li span:first-child { display: inline-block; width: 60px; }
 #snb .snbSlide_wrap .customerBox li:nth-of-type(1) span { font-size: 18px; }
 #snb .snbSlide_wrap .customerBox li:nth-of-type(2),
@@ -147,7 +147,7 @@ main .main .main_wrap { position: relative; width: 100vw; height: 100vh; display
 main .main .main_wrap #video { pointer-events: none; position: absolute; width: 1936px; height: 2080px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
 main .main .btnBox { display: block;  position: absolute; z-index: 3; width: 100%; height: 50px; bottom: 0; right: 0; }
 main .main .btnBox .playBtn,
-main .main .btnBox .pasueBtn { cursor: pointer; width: 20px; height: 20px; border-radius: 25px; position: absolute; border: 2px solid #fff; display: inline-block; right: 75px; box-shadow: 0px 0px 4px rgba(82, 82, 82, 0.52);  }
+main .main .btnBox .pasueBtn { width: 20px; height: 20px; border-radius: 25px; position: absolute; border: 2px solid #fff; display: inline-block; right: 75px; box-shadow: 0px 0px 4px rgba(82, 82, 82, 0.52);  }
 main .main .btnBox .playBtn img,
 main .main .btnBox .pasueBtn img { object-fit: cover; position: absolute;  top: 50%; left: 50%; transform: translate(-50%,-50%); }
 main .main .btnBox .pasueBtn { display: none; }
@@ -213,7 +213,7 @@ main .main .loginslide_wrap { position: sticky; top: 130px; height: 720px; margi
 #periMood_wrap { position: relative; padding: 0 60px; } 
 #periMood_wrap .content { display: flex; }
 #periMood_wrap .content li { overflow: hidden; position: relative; z-index: 1; width: 280px; height: 300px; }  
-#periMood_wrap .content li a { cursor: pointer; width: 280px; height: 300px; display: block; overflow: hidden;   } 
+#periMood_wrap .content li a { width: 280px; height: 300px; display: block; overflow: hidden;   } 
 #periMood_wrap .content li:hover a { animation: mood 1s ease-in-out; position: absolute; top: 0px; background-color: rgba(0, 0, 0, 0.471);}
 #periMood_wrap .content li span { position: absolute; left: 20px; bottom: 20px; z-index: 1; font-size: 24px; line-height:1.2; text-align: left; color: #fff; }
 #periMood_wrap .content li::after { display: block; position: absolute; content: ''; bottom: 0; width: 245px; height: 130px; background: linear-gradient( transparent, rgba(0, 0, 0, 0.63) ) }
@@ -307,7 +307,8 @@ main .main .loginslide_wrap { position: sticky; top: 130px; height: 720px; margi
 #insta_wrap .mainTitle img { width: 100%; height: 100%; }
 #insta_wrap .subTitle { margin: 10px 0 90px 0; font-size: 18px; text-align: center; }
 #insta_wrap .content ul { display: flex; flex-wrap: wrap; }
-#insta_wrap .content li { width: calc(95%/4); height: 240px; margin: 5px; }
+#insta_wrap .content li { width: calc(95%/4); height: 240px; margin: 5px;}
+#insta_wrap .content ul li a { cursor: url('../img/periperalipstick.png'),auto; }
 #insta_wrap .content li img { width: 100%; height: 100%; } 
 
 
