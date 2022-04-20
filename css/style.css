@@ -421,7 +421,7 @@ footer #footer_wrap .inner_right #optionList { width: 120px; height: 30px; borde
     #periMood_wrap .content li a { width: 100%; height: 450px; }
     #periMood_wrap .content li span { font-size: 18px; }
     #periMood_wrap .content li span:last-of-type { font: 14px; }  
-    #periMood_wrap .swiper-pagination-bullet { width: 11%; }
+    #periMood_wrap .swiper-pagination-bullet { width: 11.1%; }
 
     /* mdPick_wrap */
     #mdPick_wrap { padding: 0 40px; }
@@ -461,7 +461,7 @@ footer #footer_wrap .inner_right #optionList { width: 120px; height: 30px; borde
     header .gnb_wrap, header .gnb_wrap_clone.fixed, #snb { display: none; }
 
     main .main .main_wrap { height: 50vh; }
-    main .main .main_wrap #video{ width: 300%; height: 110%; }
+    main .main .main_wrap #video{ width: 170%; height: 110%; }
     main .main .swiper-horizontal > .swiper-pagination-bullets, main .main .swiper-pagination-bullets.swiper-pagination-horizontal, main .main .swiper-pagination-custom, .swiper-pagination-fraction { width: 100%; padding: 0 20px; }
     main .main .btnBox .playBtn, main .main .btnBox .pasueBtn { right: 95px; }
 
@@ -532,7 +532,7 @@ footer #footer_wrap .inner_right #optionList { width: 120px; height: 30px; borde
     header .gnb_wrap, header .gnb_wrap_clone.fixed, #snb { display: none; }
 
     main .main .main_wrap { height: 50vh; }
-    main .main .main_wrap #video{ width: 300%; height: 110%; }
+    main .main .main_wrap #video{ width: 170%; height: 110%; }
     main .main .swiper-horizontal > .swiper-pagination-bullets, main .main .swiper-pagination-bullets.swiper-pagination-horizontal, main .main .swiper-pagination-custom, .swiper-pagination-fraction { width: 100%; padding: 0 20px; }
     main .main .btnBox .playBtn, main .main .btnBox .pasueBtn { right: 95px; }
 
