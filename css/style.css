@@ -343,7 +343,7 @@ footer #footer_wrap .inner_right #optionList { width: 120px; height: 30px; borde
 
     header .gnbBtn_wrap { display: flex; justify-content: space-between; align-items: center; width: 95%; height: 65px; margin: 0 auto; }
     header .gnbBtn_wrap .openBtn{ position: relative; width: 20px; height: 20px; }
-    header .gnbBtn_wrap .mypageBox { width: 115px; height: 40px; }
+    header .gnbBtn_wrap .mypageBox { width: 135px; height: 40px; }
     header .gnbBtn_wrap .openBtn span,
     header .gnbBtn_wrap .closeBtn span { position: absolute; width: 20px; height: 2px; display: block; background-color: #fff; border-radius: 5px;  }
     header .gnbBtn_wrap .openBtn span.top,
