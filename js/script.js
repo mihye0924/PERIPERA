@@ -88,9 +88,9 @@ $(document).ready(function(){
     $(window).on('scroll',function(){
       var top = $(this).scrollTop()  
       if( top > height ) {   
-          $('header .gnb_wrap_clone').addClass('fixed')
+          $('header .gnb_wrap_clone').addClass('fixed')  
         }else{
-          $('header .gnb_wrap_clone').removeClass('fixed')
+          $('header .gnb_wrap_clone').removeClass('fixed') 
         }
       })
       
@@ -180,8 +180,23 @@ $(document).ready(function(){
             qnaImg.src='./img/qna.png'
           }) 
  
-      }) 
 
+        }) 
+
+      // 사이드 네비 모바일,태블릿 
+      $('.openBtn').on('click',function(){
+        $('.gnbBgMoblie').css({display : 'block'})
+        $(this).css({display:'none'})  
+        $('.closeBtn').css({display:'block'}).addClass('animate')
+        $('header .gnbBtn_wrap').css({borderBottom:'0'})
+      })
+
+       
+      $('.closeBtn').on('click',function(){
+        $('.gnbBgMoblie').css({display : 'none'})
+        $(this).css({display:'none'}) 
+        $('.openBtn').css({display:'block'}).addClass('animate')
+      })
 
 
 

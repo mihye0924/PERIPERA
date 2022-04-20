@@ -117,38 +117,97 @@
         </nav> 
 
         <!-- 태블릿, 모바일 버전 -->
-        <div class="gnbBtn_wrap">
-            <div class="openBtn">
-                <span class="top"></span>
-                <span class="center"></span>
-                <span class="bottom"></span>
-            </div> 
-            <div class="closeBtn">
-                <span class="top"></span>
-                <span class="center"></span>
-                <span class="bottom"></span>
-            </div>
-            <nav class="mypageBox">
-                <ul>
-                    <li class="user">
-                        <a href="#">
-                            <img src="./img/user_white.png" alt="">
-                        </a>
-                    </li>
-                    <li class="cart">
-                        <a href="#">
-                            <img src="./img/cart_white.png" alt="">
-                        </a>
-                    </li>
-                    <li class="search">
-                        <a href="#">
-                            <img src="./img/search_white.png" alt="">
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div> 
+        <div class="gnbBtn_wrap"> 
+            <div class="inner">
+                <div class="logo">
+                    <img src="./img/logo_peripera.png" alt="">
+                </div> 
+                <div class="mypageBox"> 
+                    <div class="openBtn">
+                        <span class="top"></span>
+                        <span class="center"></span>
+                        <span class="bottom"></span>
+                    </div> 
+                    <div class="closeBtn">
+                        <span class="top"></span>
+                        <span class="center"></span>
+                        <span class="bottom"></span>
+                    </div> 
+                </div>  
+            </div>   
 
+            <div class="gnbBgMoblie">
+                <div class="contentBox">
+                    <!-- <img src="./img/cloud.png" alt=""> --> 
+                    <!-- <div class="search_m">
+                        <form action="">
+                            <input type="text">
+                            <input type="image" src="img/search.png">
+                        </form>
+                    </div>--> 
+                    <nav>
+                        <ul class="search_mobile">
+                            <li>    
+                                <form action="">
+                                    <input type="text" id="gnb_searchText_m"  placeholder="검색어를 입력해주세요.">
+                                    <input type="image" src="./img/search.png" id="gnb_search_m">
+                                </form>
+                            </li>
+                        </ul>
+                        <ul class="mainBox"> 
+                           
+                            <li>
+                                <a href="#">SHOPPING</a> 
+                                <ul class="subBox"> 
+                                    <li><a href="#">베이스</a></li>
+                                    <li><a href="#">립</a></li>
+                                    <li><a href="#">아이</a></li>
+                                    <li class="cik"><a href="#">치크/하이라이터</a></li>
+                                    <li><a href="#">쉐딩</a></li>
+                                    <li><a href="#">클렌징</a></li>
+                                    <li><a href="#">스킨케어</a></li>
+                                    <li><a href="#">기타</a></li>  
+                                </ul>  
+                            </li>
+                            <li><a href="#">PRODUCT</a></li>
+                            <li><a href="#">BRAND</a></li>
+                            <li><a href="#">MEDIA</a></li> 
+                        </ul> 
+                    </nav>
+                        
+                </div> 
+                <div class="gnbMoblieFooter_left">
+                    <ul>
+                        <li>
+                            <img src="./img/clubclio.png" alt="클럽클리오">
+                              </li>
+                        <li>
+                            <img src="./img/instagram.png" alt="인스타">
+                               </li>
+                        <li>
+                            <img src="./img/facebook.png" alt="페이스북">
+                            </li>
+                        <li>
+                            <img src="./img/youtube.png" alt="유튜브">
+                        </li>
+                    </ul>
+                    <div class="gnbMoglieFooter_right">
+                        <select name="" id="optionList">
+                            <option clss="familysite" disabled selected hidden>FAMILY SITE</option>
+                            <option value=""><span>(주)클리오</span></option>
+                            <option value=""><span>클럽클리오</span></option>
+                            <option value=""><span>클리오</span></option>
+                            <option value=""><span>구달</span></option>
+                            <option value=""><span>더마트리</span></option>
+                            <option value=""><span>트루알엑스</span></option>
+                        </select>  
+                        <div class="logo">
+                            <img src="./img/logo_peripera.png" alt="">
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>  
     </header> 
 
     <!-- 사이드바 -->
@@ -1007,26 +1066,6 @@
 
     <!-- 푸터 -->
     <footer>
-        <!-- <div id="familysite_wrap">
-            <ul>
-                <li>
-                    <img src="./img/clubclio.png" alt="클럽클리오">
-                    <span class="clearfix">클럽클리오</span>
-                </li>
-                <li>
-                    <img src="./img/instagram.png" alt="인스타">
-                    <span class="clearfix">인스타그램</span>
-                </li>
-                <li>
-                    <img src="./img/facebook.png" alt="페이스북">
-                    <span class="clearfix">페이스북</span>
-                </li>
-                <li>
-                    <img src="./img/youtube.png" alt="유튜브">
-                    <span class="clearfix">유튜브</span>
-                </li>
-            </ul>
-        </div> -->
         <div id="footer_wrap">
             <div class="inner_left">
                 <ul class="customerCenter">
@@ -1045,16 +1084,7 @@
                 <span>( 토 / 일 공휴일 휴무 )</span>
             </div>
             <div class="inner_right">
-                <div class="logofamilysite_wrap">  
-                    <!-- <select name="" id="optionList">
-                        <option clss="familysite" disabled selected hidden>FAMILY SITE</option>
-                        <option value=""><span>(주)클리오</span></option>
-                        <option value=""><span>클럽클리오</span></option>
-                        <option value=""><span>클리오</span></option>
-                        <option value=""><span>구달</span></option>
-                        <option value=""><span>더마트리</span></option>
-                        <option value=""><span>트루알엑스</span></option>
-                    </select>   -->
+                <div class="logofamilysite_wrap">   
                     <h1 class="logo"><img src="./img/logo_peripera.png"/></h1>
                 </div>
                 <div class="address">
