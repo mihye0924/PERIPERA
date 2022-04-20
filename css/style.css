@@ -397,7 +397,7 @@ footer #footer_wrap .inner_right #optionList { width: 120px; height: 30px; borde
     /* main */
     main .main .swiper-horizontal > .swiper-pagination-bullets, main .main .swiper-pagination-bullets.swiper-pagination-horizontal, main .main .swiper-pagination-custom, .swiper-pagination-fraction { width: 100%; padding: 0 20px; }
     main .main .btnBox .playBtn, main .main .btnBox .pasueBtn { right:90px; bottom: -2px; }
-    main .main .main_wrap #video { width:200%; height: 130%; }
+    main .main .main_wrap #video { width:260%; height: 130%; }
 
     /* best_wrap */
     .mainTitle { font-size: 28px; }
