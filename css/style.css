@@ -331,8 +331,8 @@ footer #footer_wrap .inner_left .customerTime li:nth-of-type(2) { flex-grow: 10;
 footer #footer_wrap .inner_left .customerTime li:nth-of-type(2) { text-align: right; margin-right: 20px;  }
 footer #footer_wrap .inner_left .customerCenter { margin-top: 55px; } 
 footer #footer_wrap .inner_left .customerCenter li span { font-size: 18px; } 
-footer #footer_wrap .inner_right .logofamilysite_wrap { display: flex; align-items: center; width: 130px; height: 60px; margin-top: 50px; float: right; }
-footer #footer_wrap .inner_right .logo { display: block; width: 180px; height: 60px; }
+footer #footer_wrap .inner_right .logofamilysite_wrap { margin-top: 50px; }
+footer #footer_wrap .inner_right .logo { display: block; width: 180px; height: 60px; float: right; }
 footer #footer_wrap .inner_right .logo img { width: 100%; height: 100%; }
 footer #footer_wrap .inner_right .address { width: 540px; text-align: end; margin-top: 5px; float: right; }
 footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px; letter-spacing: -1px; }
