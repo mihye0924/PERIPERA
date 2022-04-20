@@ -32,22 +32,22 @@ $(document).ready(function(){
       pagination: {
         el: ".periMood-pagination",
       },
-      // autoplay: {
-      //   // delay: 1000, 
-      //   // disableOnInteraction: false
-      // },
+      autoplay: {
+        // delay: 1000, 
+        // disableOnInteraction: false
+      },
      
-      // on: {
-      //   init() {
-      //     this.el.addEventListener('mouseenter', () => {
-      //       this.autoplay.stop();
-      //     });
+      on: {
+        init() {
+          this.el.addEventListener('mouseenter', () => {
+            this.autoplay.stop();
+          });
     
-      //     this.el.addEventListener('mouseleave', () => {
-      //       this.autoplay.start();
-      //     });
-      //   }
-      // },
+          this.el.addEventListener('mouseleave', () => {
+            this.autoplay.start();
+          });
+        }
+      },
       breakpoints: {
         1024:{
           slidesPerView : 4,
@@ -97,32 +97,33 @@ $(document).ready(function(){
 
 
       // 네비
-      // productsub 
-      $('header .gnb .product').on('mouseover',function(){
-        $('.product_sub').slideDown()
+      // productsub  
+        $('.product').on('mouseover',function(){
+          $(this).addClass('hover')
+          $('.product_sub').slideDown()
+        }).on('mouseleave', function(){
+          $(this).removeClass('hover')
+          $('.product_sub').slideUp()
+        })
+      
+
+      $('.brand').on('mouseover',function(){
         $(this).addClass('hover')  
-      }).on('mouseleave',function(){
-        $('.product_sub').slideUp() 
-        $(this).removeClass('hover')
-      })  
-
-      $('header .gnb .brand').on('mouseover',function(){
         $('.brand_sub').slideDown()
-        $(this).addClass('hover')
-      
-      }).on('mouseleave',function(){
+      }).on('mouseleave', function(){
+        $(this).removeClass('hover')
         $('.brand_sub').slideUp()
-        $(this).removeClass('hover')
-      }) 
+      })
+   
 
-      $('header .gnb .media').on('mouseover',function(){
+      $('.media').on('mouseover',function(){ 
+        $(this).addClass('hover') 
         $('.media_sub').slideDown()
-        $(this).addClass('hover')
-      
-      }).on('mouseleave',function(){
-        $('.media_sub').slideUp()
+      }).on('mouseleave', function(){
         $(this).removeClass('hover')
-      }) 
+        $('.media_sub').slideUp()
+      })
+   
 
 
       // 사이드 네비   
