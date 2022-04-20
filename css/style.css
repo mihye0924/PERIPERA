@@ -383,11 +383,11 @@ footer #footer_wrap .inner_right #optionList { width: 120px; height: 30px; borde
     header .gnbBtn_wrap.fixed {  border-bottom: 1px solid #bebebe; display: block; width: 100%; height: 70px; position: fixed; z-index: 3; top: 0; animation: slideDown 1s ease-in-out; background-color: #fff; }
     header .gnbBtn_wrap.fixed span { color: #343434; }
     header .gnbMoblieFooter_left { display: flex; position: absolute; bottom: 0; width: 100%; height: 180px; border: 1px solid #bebebe; background-color: #fff; }
-    header .gnbMoblieFooter_left ul { display: flex; width: 600px; float: left; }
+    header .gnbMoblieFooter_left ul { display: flex; width: 600px; height: 180px; float: left; }
     header .gnbMoblieFooter_left li { width: 150px; height: 110px; display: flex; align-items: center; }
     header .gnbMoblieFooter_left li:last-of-type { border-right: 1px solid #bebebe;}
     header .gnbMoblieFooter_left img { width: 30px; height: 30px; display: block; margin: 0 auto; }
-    header .gnbMoglieFooter_right { display: block; float: left; width: 100%; height: 110px; }
+    header .gnbMoglieFooter_right { display: block; float: left; width: 100%; height: 180px; }
     header .gnbMoglieFooter_right #optionList { width: 100%; height: 30px; margin: 0 auto; border: 0; border-bottom: 1px solid #bebebe; text-align: center; }
     header .gnbMoglieFooter_right #optionList option { box-shadow: 0; }
     header .gnbMoglieFooter_right #optionList:focus { outline: none; }
