@@ -32,22 +32,22 @@ $(document).ready(function(){
       pagination: {
         el: ".periMood-pagination",
       },
-      autoplay: {
-        // delay: 1000, 
-        // disableOnInteraction: false
-      },
+      // autoplay: {
+      //   delay: 1000, 
+      //   disableOnInteraction: false
+      // },
      
-      on: {
-        init() {
-          this.el.addEventListener('mouseenter', () => {
-            this.autoplay.stop();
-          });
+      // on: {
+      //   init() {
+      //     this.el.addEventListener('mouseenter', () => {
+      //       this.autoplay.stop();
+      //     });
     
-          this.el.addEventListener('mouseleave', () => {
-            this.autoplay.start();
-          });
-        }
-      },
+      //     this.el.addEventListener('mouseleave', () => {
+      //       this.autoplay.start();
+      //     });
+      //   }
+      // },
       breakpoints: {
         1024:{
           slidesPerView : 4,

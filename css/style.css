@@ -230,7 +230,7 @@ main .main .loginslide_wrap { position: sticky; top: 130px; height: 720px; margi
 #periMood_wrap .swiper-pagination-bullet, 
 #periMood_wrap .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet { margin: 0; }
 #periMood_wrap .swiper-pagination-bullet { border-radius: 0; width: 126px;  background:transparent; opacity: 1;  }
-#periMood_wrap .swiper-pagination-bullet-active { position: relative; top: -13px; background-color:  var(--bgcolor); height: 5px; border-radius: 25px; }
+#periMood_wrap .swiper-pagination-bullet-active { position: relative; top: -9px; background-color:  var(--bgcolor); height: 5px; border-radius: 25px; }
 
 
 /* mdPick_wrap */ 
@@ -423,7 +423,7 @@ footer #footer_wrap .inner_right #optionList { width: 120px; height: 30px; borde
     #periMood_wrap .content li a { width: 100%; height: 450px; }
     #periMood_wrap .content li span { font-size: 18px; }
     #periMood_wrap .content li span:last-of-type { font: 14px; }  
-    #periMood_wrap .swiper-pagination-bullet { width: 86.5px; }
+    #periMood_wrap .swiper-pagination-bullet { width: 91.5px; }
 
     /* mdPick_wrap */
     #mdPick_wrap { padding: 0 20px; }
