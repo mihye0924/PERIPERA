@@ -31,35 +31,38 @@ $(document).ready(function(){
       },
       pagination: {
         el: ".periMood-pagination",
+      }, 
+      autoplay: {
+        delay: 1000, 
+        disableOnInteraction: false
+        
       },
-      // autoplay: {
-      //   delay: 1000, 
-      //   disableOnInteraction: false
-      // },
+      loop:true,
+      
      
-      // on: {
-      //   init() {
-      //     this.el.addEventListener('mouseenter', () => {
-      //       this.autoplay.stop();
-      //     });
+      on: {
+        init() {
+          this.el.addEventListener('mouseenter', () => {
+            this.autoplay.stop();
+          });
     
-      //     this.el.addEventListener('mouseleave', () => {
-      //       this.autoplay.start();
-      //     });
-      //   }
-      // },
+          this.el.addEventListener('mouseleave', () => {
+            this.autoplay.start();
+          });
+        }
+      },
       breakpoints: {
         1024:{
           slidesPerView : 4,
-          spaceBetween : 15,
+          spaceBetween : 10,
         },
         768: {
           slidesPerView: 3, 
-          spaceBetween: 15
+          spaceBetween: 10,
          },
         480: {
           slidesPerView: 2, 
-          spaceBetween: 15
+          spaceBetween: 10,
         }
       }
     });
@@ -93,8 +96,10 @@ $(document).ready(function(){
       var top = $(this).scrollTop()  
       if( top > height ) {   
           $('header .gnb_wrap_clone').addClass('fixed')  
+          $('header .gnbBtn_wrap').addClass('fixed')
         }else{
           $('header .gnb_wrap_clone').removeClass('fixed') 
+          $('header .gnbBtn_wrap').removeClass('fixed') 
         }
       })
       
@@ -189,19 +194,28 @@ $(document).ready(function(){
 
       // 사이드 네비 모바일,태블릿 
       $('.openBtn').on('click',function(){
-        $('.gnbBgMoblie').css({display : 'block'})
+        $('body').css({overflow : 'hidden'})
+        $('.closeBtn').css({display:'block'}).addClass('animate') 
+        $('.gnbBtn_wrap').addClass('active')
         $(this).css({display:'none'})  
-        $('.closeBtn').css({display:'block'}).addClass('animate')
-        $('header .gnbBtn_wrap').css({borderBottom:'0'})
       })
 
        
       $('.closeBtn').on('click',function(){
-        $('.gnbBgMoblie').css({display : 'none'})
-        $(this).css({display:'none'}) 
+        $('body').css({overflow : 'visible'})
         $('.openBtn').css({display:'block'}).addClass('animate')
+        $('.gnbBtn_wrap').removeClass('active') 
+        $(this).css({display:'none'}) 
       })
 
+      $('header .gnbBtn_wrap .gnbMobile .main_optionList>li').on('click',function(){ 
+       $(this).addClass('active')
+      }) 
+      $('header .gnbBtn_wrap .gnbMobile .main_optionList>li.active').on('click',function(){ 
+        $(this).removeClass('active')
+       }) 
+  
+     
 
 
 
