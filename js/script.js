@@ -207,15 +207,45 @@ $(document).ready(function(){
         $('.gnbBtn_wrap').removeClass('active') 
         $(this).css({display:'none'}) 
       })
+ 
 
-      $('header .gnbBtn_wrap .gnbMobile .main_optionList>li').on('click',function(){ 
-       $(this).addClass('active')
+      
+      var productMobile = $('.productMobile .optionList')
+      var brandMobile = $('.brandMobile .optionList')
+      var mediaMobile = $('.mediaMobile .optionList')
+
+      
+          
+
+
+      $('.productMobile').on('click',function(){  
+ 
+        $('.productMobile .optionList').slideToggle()  
+        if ($(this).hasClass("active")) {
+          $(".productMobile").removeClass("active");  
+        }else {
+          $(".productMobile").removeClass("active");
+          $(this).addClass("active");
+        }
+        if( brandMobile.css('display') === 'block'){
+         brandMobile.slideUp()
+         $('.brandMobile').removeClass('active')
+        }
+
+
+
       }) 
-      $('header .gnbBtn_wrap .gnbMobile .main_optionList>li.active').on('click',function(){ 
-        $(this).removeClass('active')
-       }) 
-  
-     
+      $('.productMobile.active').on('click',function(){  
+        $(this).removeClass('active')  
+      })
+
+      
+      $('.brandMobile').on('click',function(){   
+        $(this).addClass('active')  
+        $('.brandMobile .optionList').slideToggle() 
+        $('.productMobile, .mediaMobile').removeClass('active')
+ 
+      })
 
 
 

@@ -338,7 +338,7 @@ footer #footer_wrap .inner_right #optionList { width: 120px; height: 30px; borde
     
     /* 상단 고정네비 */
     header .gnbBtn_wrap.active { position: fixed; border-bottom: 1px solid #bebebe; } 
-    header .gnbBtn_wrap.active .inner { background-color: #fff; }
+    /* header .gnbBtn_wrap.active .inner { background-color: #fff; } */
     header .gnbBtn_wrap.active .gnbMobile { display: block; margin-top: -85px; overflow: auto; }
     header .gnbBtn_wrap.active .logo .wh { display: none; }
     header .gnbBtn_wrap.active .logo .bk { display: block !important; } 
@@ -381,7 +381,7 @@ footer #footer_wrap .inner_right #optionList { width: 120px; height: 30px; borde
     
     
     header .gnbBtn_wrap .gnbMobile { display: none; position: fixed; z-index: -2; width: 100%; height: 100%; background-color:#fff;}
-    header .gnbBtn_wrap .gnbMobile .container { position: relative; width: 780px; margin: 120px auto 0 auto; padding: 0 30px ; }
+    header .gnbBtn_wrap .gnbMobile .container { position: relative; width: 780px; margin: 145px auto 0 auto; padding: 0 30px ; }
     header .gnbBtn_wrap .gnbMobile .search { width: 715px; height: 50px; border: 1px solid #bebebe; border-radius: 5px; padding: 30px 1px; border-bottom: 1px solid #bebebe; display: flex; justify-content: space-between; align-items: center; margin: 35px 0px 65px 0; } 
  
     header .gnbBtn_wrap .gnbMobile input#searchMtext { font-size: 18px; width: 695px; height: 45px; padding: 15px;  border: 0; }
@@ -389,21 +389,21 @@ footer #footer_wrap .inner_right #optionList { width: 120px; height: 30px; borde
     header .gnbBtn_wrap .gnbMobile input#searchMImg { width: 30px; height: 30px; margin-right: 15px; }
     header .gnbBtn_wrap .gnbMobile .loginJoinBox { width: 715px; height: 60px;}
     header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='login'],
-    header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='join'] { font-size: 15px; margin-right: 10px; float: left; width: 230px; height: 55px; background-color: transparent; border: 1px solid var(--bgcolor); border-radius: 5px; }
+    header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='join'] { font-family: 'MinSans-Medium'; font-size: 17px; margin-right: 10px; float: left; width: 230px; height: 55px; background-color: transparent; border: 1px solid var(--bgcolor); border-radius: 5px; }
     header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='login'] { background-color: var(--bgcolor); color: #fff; }
-    header .gnbBtn_wrap .gnbMobile #optionList { display: block; width: 230px; height: 55px; float: left; border-radius: 5px; border: 1px solid var(--bgcolor); text-align: center; }
+    header .gnbBtn_wrap .gnbMobile #optionList { background-color: #fff; font-family: 'MinSans-Medium'; font-size: 17px; display: block; width: 230px; height: 55px; float: left; border-radius: 5px; border: 1px solid var(--bgcolor); text-align: center; }
     header .gnbBtn_wrap .gnbMobile #optionList:focus { outline: none; }
 
-    header .gnbBtn_wrap .gnbMobile .main_optionList>li.active a { color: var(--bgcolor); }
-    header .gnbBtn_wrap .gnbMobile .main_optionList>li.active .optionList { display: block; animation: gnbslideMobile 1s ease-in-out;  }
-    
+    header .gnbBtn_wrap .gnbMobile .main_optionList>li.active a { color: var(--bgcolor); } 
+
+
     header .gnbBtn_wrap .gnbMobile .main_optionList>li { position: relative; border-top: 1px solid #bebebe; border-bottom: 1px solid #bebebe; }
     header .gnbBtn_wrap .gnbMobile .main_optionList li a { display: block; font-size: 54px; padding: 30px; }
-    header .gnbBtn_wrap .gnbMobile .main_optionList .optionList{ display: block; } 
+    header .gnbBtn_wrap .gnbMobile .main_optionList .optionList{ display: none; } 
     header .gnbBtn_wrap .gnbMobile .main_optionList .optionList li a { font-size: 24px; color: #616161; padding: 35px 70px; }
     
     
-    header .gnbMoblieFooter { display: flex; width: 260px; margin: 50px auto; justify-content: space-between; }
+    header .gnbMoblieFooter { display: flex; width: 260px; margin:100px auto 50px auto; justify-content: space-between; }
     header .gnbMoblieFooter li { width: 45px; height: 45px; }
     header .gnbMoblieFooter li img { width: 100%; height: 100% }
     
@@ -532,8 +532,9 @@ footer #footer_wrap .inner_right #optionList { width: 120px; height: 30px; borde
     #insta_wrap .content li { width: calc(98%/2); height: 295px; margin: 0; margin-bottom: 10px; }
     
 
-    /* banner_wrap */
-    #banner_wrap .content { height: 200px; }
+    /* banner_wrap */ 
+    #banner_wrap .content { width: 100%; height: 315px; position: relative; }
+    #banner_wrap .content img {width: 100%; height: 100%; object-fit: cover; object-position: 90%; }
 
     /* footer */
     footer #footer_wrap { width: 100%; padding: 0 20px; } 
@@ -613,8 +614,10 @@ footer #footer_wrap .inner_right #optionList { width: 120px; height: 30px; borde
     #insta_wrap .content li { width: calc(97%/2); height: 228px; margin: 0; }
     
 
-    /* banner_wrap */
-    #banner_wrap .content { height: 200px; }
+    /* banner_wrap */ 
+    #banner_wrap .content { width: 100%; height: 315px; position: relative; }
+    #banner_wrap .content img {width: 100%; height: 100%; object-fit: cover; object-position: 90%; }
+
 
     /* footer */
     footer #footer_wrap { width: 100%; padding: 0 20px; justify-content: unset; text-align: center; } 
