@@ -142,23 +142,27 @@
                 <div class="loginJoinBox">
                     <input type="button" id="login" value="로그인">
                     <input type="button" id="join" value="회원가입">
-                        
-                    <select name="" id="optionList">
-                        <option clss="familysite" disabled selected hidden>FAMILY SITE</option>
-                        <option value=""><span>(주)클리오</span></option>
-                        <option value=""><span>클럽클리오</span></option>
-                        <option value=""><span>클리오</span></option>
-                        <option value=""><span>구달</span></option>
-                        <option value=""><span>더마트리</span></option>
-                        <option value=""><span>트루알엑스</span></option>
-                    </select>    
+                       
+                    <input type="checkbox" id="chk"> 
+                    <div class="listBox">  
+                        <select name="" id="optionList" class="select">
+                            <option clss="familysite" disabled selected hidden>FAMILY SITE</option>
+                            <option value="">(주)클리오</option>
+                            <option value="">클럽클리오</option>
+                            <option value="">클리오기업소개</option>
+                            <option value="">구달</option>
+                            <option value="">더마트리</option>
+                            <option value="">트루알엑스</option> 
+                        </select> 
+                        <span class="arrowIcon"></span>
+                    </div>
                 </div> 
                 <div class="search">
                     <input type="text" id="searchMtext" placeholder="search">
                     <input type="image" src="./img/search.png" id="searchMImg"> 
                 </div> 
                 <ul class="main_optionList">
-                    <li>
+                    <li class="shoppingMobile"> 
                         <a href="#">SHOPPING</a>
                     </li>
                     <li class="productMobile">

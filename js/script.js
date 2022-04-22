@@ -37,9 +37,9 @@ $(document).ready(function(){
         disableOnInteraction: false
         
       },
-      loop:true,
-      
-     
+      loop:true, 
+      slidesPerView: 2, 
+      spaceBetween: 10,
       on: {
         init() {
           this.el.addEventListener('mouseenter', () => {
@@ -102,7 +102,44 @@ $(document).ready(function(){
           $('header .gnbBtn_wrap').removeClass('fixed') 
         }
       })
-      
+
+       // 엠디픽 옵션 버튼
+      // mdPick btn
+      $('#mdPick_wrap .btnBox .all').on('click',function(){
+        $('.allInner').css({ display : 'flex' })
+        $('.allBtn').css({ display : 'block' })
+        $('.baseInner, .eyeInner, .lipInner').css({ display : 'none' })
+        $('.baseBtn, .eyeBtn, .lipBtn').css({ display : 'none' })
+        $(this).addClass('active')
+        $('#mdPick_wrap .btnBox .base, #mdPick_wrap .btnBox .eye, #mdPick_wrap .btnBox .lip').removeClass('active')
+      })
+
+      $('#mdPick_wrap .btnBox .base').on('click',function(){
+        $('.baseInner').css({ display : 'flex' })
+        $('.baseBtn').css({ display : 'block' })
+        $('.allInner, .eyeInner, .lipInner').css({ display : 'none' })
+        $('.allBtn, .eyeBtn, .lipBtn').css({ display : 'none' })
+        $(this).addClass('active')
+        $('#mdPick_wrap .btnBox .all, #mdPick_wrap .btnBox .eye, #mdPick_wrap .btnBox .lip').removeClass('active')
+      })
+
+      $('#mdPick_wrap .btnBox .eye').on('click',function(){
+        $('.eyeInner').css({ display : 'flex' })
+        $('.eyeBtn').css({ display : 'block' })
+        $('.allInner, .baseInner, .lipInner').css({ display : 'none' })
+        $('.allBtn, .baseBtn, .lipBtn').css({ display : 'none' })
+        $(this).addClass('active')
+        $('#mdPick_wrap .btnBox .all, #mdPick_wrap .btnBox .base, #mdPick_wrap .btnBox .lip').removeClass('active')
+      })
+
+      $('#mdPick_wrap .btnBox .lip').on('click',function(){
+        $('.lipInner').css({ display : 'flex' })
+        $('.lipBtn').css({ display : 'block' })
+        $('.allInner, .baseInner, .eyeInner').css({ display : 'none' })
+        $('.allBtn, .baseBtn, .eyeBtn').css({ display : 'none' })
+        $(this).addClass('active')
+        $('#mdPick_wrap .btnBox .all, #mdPick_wrap .btnBox .base, #mdPick_wrap .btnBox .eye').removeClass('active')
+      })
 
 
       // 네비
@@ -192,7 +229,7 @@ $(document).ready(function(){
 
         }) 
 
-      // 사이드 네비 모바일,태블릿 
+      // 네비 모바일, 태블릿 토글버튼
       $('.openBtn').on('click',function(){
         $('body').css({overflow : 'hidden'})
         $('.closeBtn').css({display:'block'}).addClass('animate') 
@@ -208,18 +245,24 @@ $(document).ready(function(){
         $(this).css({display:'none'}) 
       })
  
-
-      
+      //  네비 모바일, 태블릿 옵션
       var productMobile = $('.productMobile .optionList')
       var brandMobile = $('.brandMobile .optionList')
-      var mediaMobile = $('.mediaMobile .optionList')
+      var mediaMobile = $('.mediaMobile .optionList')  
+      $('.shoppingMobile').on('click',function(){     
+        if( brandMobile.css('display') === 'block'){
+         brandMobile.slideUp()
+         $('.brandMobile').removeClass('active')
+        }else if( mediaMobile.css('display') === 'block'){
+          mediaMobile.slideUp()
+          $('.mediaMobile').removeClass('active')
+        }else if(productMobile.css('display') === 'block'){
+          productMobile.slideUp()
+          $('.productMobile').removeClass('active')
+        } 
+      })
 
-      
-          
-
-
-      $('.productMobile').on('click',function(){  
- 
+      $('.productMobile').on('click',function(){   
         $('.productMobile .optionList').slideToggle()  
         if ($(this).hasClass("active")) {
           $(".productMobile").removeClass("active");  
@@ -230,61 +273,62 @@ $(document).ready(function(){
         if( brandMobile.css('display') === 'block'){
          brandMobile.slideUp()
          $('.brandMobile').removeClass('active')
+        }else if( mediaMobile.css('display') === 'block'){
+          mediaMobile.slideUp()
+          $('.mediaMobile').removeClass('active')
+        }else if(productMobile){
+          $('productMobile').removeClass('active')
         }
-
-
-
       }) 
-      $('.productMobile.active').on('click',function(){  
-        $(this).removeClass('active')  
+
+      $('.brandMobile').on('click',function(){   
+        $('.brandMobile .optionList').slideToggle()  
+        if ($(this).hasClass("active")) {
+          $(".brandMobile").removeClass("active");  
+        }else {
+          $(".brandMobile").removeClass("active");
+          $(this).addClass("active");
+        }
+        if( productMobile.css('display') === 'block'){
+          productMobile.slideUp()
+         $('.productMobile').removeClass('active')
+        }else if( mediaMobile.css('display') === 'block'){
+          mediaMobile.slideUp()
+          $('.mediaMobile').removeClass('active')
+        }  
       })
 
       
-      $('.brandMobile').on('click',function(){   
-        $(this).addClass('active')  
-        $('.brandMobile .optionList').slideToggle() 
-        $('.productMobile, .mediaMobile').removeClass('active')
- 
+      $('.mediaMobile').on('click',function(){   
+        $('.mediaMobile .optionList').slideToggle()  
+       if ($(this).hasClass("active")) {
+          $(".mediaMobile").removeClass("active");  
+        }else {
+          $(".mediaMobile").removeClass("active");
+          $(this).addClass("active");
+        }
+        if( productMobile.css('display') === 'block'){
+          productMobile.slideUp()
+         $('.productMobile').removeClass('active')
+        }else if( brandMobile.css('display') === 'block'){
+          brandMobile.slideUp()
+          $('.brandMobile').removeClass('active')
+        }  
       })
 
 
-
- 
-      // 엠디픽 옵션 버튼
-      // mdPick btn
-      $('#mdPick_wrap .btnBox .all').on('click',function(){
-        $('.allInner').css({ display : 'flex' })
-        $('.allBtn').css({ display : 'block' })
-        $('.baseInner, .eyeInner, .lipInner').css({ display : 'none' })
-        $('.baseBtn, .eyeBtn, .lipBtn').css({ display : 'none' })
-        $(this).addClass('active')
-        $('#mdPick_wrap .btnBox .base, #mdPick_wrap .btnBox .eye, #mdPick_wrap .btnBox .lip').removeClass('active')
+      // 셀렉트 박스 커스텀   
+      var chk = $("input[type=checkbox]");
+      console.log(chk)
+        $('#optionList').on('click',function(){  
+          if ($(this).hasClass("checked")) {
+            $("#optionList").removeClass("checked");  
+            $(chk).removeAttr('checked') 
+          }else {
+            $("#optionList").removeClass("checked");
+            $(this).addClass("checked");
+            $(chk).attr('checked','checked') 
+          }
+        }) 
+         
       })
-
-      $('#mdPick_wrap .btnBox .base').on('click',function(){
-        $('.baseInner').css({ display : 'flex' })
-        $('.baseBtn').css({ display : 'block' })
-        $('.allInner, .eyeInner, .lipInner').css({ display : 'none' })
-        $('.allBtn, .eyeBtn, .lipBtn').css({ display : 'none' })
-        $(this).addClass('active')
-        $('#mdPick_wrap .btnBox .all, #mdPick_wrap .btnBox .eye, #mdPick_wrap .btnBox .lip').removeClass('active')
-      })
-
-      $('#mdPick_wrap .btnBox .eye').on('click',function(){
-        $('.eyeInner').css({ display : 'flex' })
-        $('.eyeBtn').css({ display : 'block' })
-        $('.allInner, .baseInner, .lipInner').css({ display : 'none' })
-        $('.allBtn, .baseBtn, .lipBtn').css({ display : 'none' })
-        $(this).addClass('active')
-        $('#mdPick_wrap .btnBox .all, #mdPick_wrap .btnBox .base, #mdPick_wrap .btnBox .lip').removeClass('active')
-      })
-
-      $('#mdPick_wrap .btnBox .lip').on('click',function(){
-        $('.lipInner').css({ display : 'flex' })
-        $('.lipBtn').css({ display : 'block' })
-        $('.allInner, .baseInner, .eyeInner').css({ display : 'none' })
-        $('.allBtn, .baseBtn, .eyeBtn').css({ display : 'none' })
-        $(this).addClass('active')
-        $('#mdPick_wrap .btnBox .all, #mdPick_wrap .btnBox .base, #mdPick_wrap .btnBox .eye').removeClass('active')
-      })
-})
