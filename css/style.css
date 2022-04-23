@@ -17,7 +17,7 @@ body, button, a  { cursor: url('../img/periperalipstick.png'),auto }
 body.mini a, body.mini { cursor: url('../img/periperalipstick-20.png'),auto }
 body::-webkit-scrollbar { width: 10px; } 
 body::-webkit-scrollbar-thumb { background-color: #34343434; border-radius: 5px; }
-.select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+.select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none;   text-align-last: center; -ms-text-align-last: center; -moz-text-align-last: center; }
 a,p,span,h1,h2,h3,h4,h5,h6 { font-weight: 300;  text-decoration: none; font-size: 14px; color: #343434; font-family: 'MinSans-Medium'; letter-spacing: -2px; }
 li { list-style-type: none; }
  
