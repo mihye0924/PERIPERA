@@ -558,7 +558,7 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     header .gnbBtn_wrap .gnbMobile input#searchMImg { width: 30px; height: 30px; margin-right: 15px; }
     header .gnbBtn_wrap .gnbMobile .loginJoinBox { width: 100%; height: 60px;}
     header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='login'],
-    header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='join'] { font-family: 'MinSans-Medium'; font-size: 17px; margin-right: 10px; float: left; width: 32%; height: 55px; background-color: transparent; border: 1px solid var(--bgcolor); border-radius: 5px; }
+    header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='join'] { -webkit-appearance: none; -webkit-border:none; font-family: 'MinSans-Medium'; font-size: 17px; margin-right: 10px; float: left; width: 32%; height: 55px; background-color: transparent; border: 1px solid var(--bgcolor); border-radius: 5px; }
     header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='login'] { background-color: var(--bgcolor); color: #fff; }
     header .gnbBtn_wrap .gnbMobile .listBox { position: relative; }  
     header .gnbBtn_wrap .gnbMobile input#chk { position: absolute; z-index: 1; display: none; }   
