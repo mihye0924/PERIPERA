@@ -337,7 +337,8 @@ $(document).ready(function(){
         
     function onYouTubeIframeAPIReady(){
       player = new YT.Player('player',{
-        width: '100%',
+        width: '270%',
+        height: '130%',
         videoId:'uiRcKpBGhhw',
         playerVars : { 'autoplay' : 1, 'playsinline' :1 },
         events : { 'onReady' : onPlayerReady }
