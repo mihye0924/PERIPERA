@@ -17,7 +17,7 @@ body, button, a  { cursor: url('../img/periperalipstick.png'),auto }
 body.mini a, body.mini { cursor: url('../img/periperalipstick-20.png'),auto }
 body::-webkit-scrollbar { width: 10px; } 
 body::-webkit-scrollbar-thumb { background-color: #34343434; border-radius: 5px; }
-.select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; text-align-last: center; -ms-text-align-last: center; -moz-text-align-last: center; direction: ltr; }
+.select { -o-appearance: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; text-align-last: center; -ms-text-align-last: center; -moz-text-align-last: center; text-align: -webkit-center;}
 a,p,span,h1,h2,h3,h4,h5,h6 { font-weight: 300;  text-decoration: none; font-size: 14px; color: #343434; font-family: 'MinSans-Medium'; letter-spacing: -2px; }
 li { list-style-type: none; }
  
@@ -902,13 +902,13 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='login'] { background-color: var(--bgcolor); color: #fff; }
     header .gnbBtn_wrap .gnbMobile .listBox { position: relative; }  
     header .gnbBtn_wrap .gnbMobile input#chk { position: absolute; z-index: 1; display: none; }   
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList { position: absolute; background-color: #fff; width:35%; height: 35px;  border-radius: 5px; border: 1px solid var(--bgcolor); font-family: 'MinSans-Medium'; font-size: 12px; text-align: center; }
+    header .gnbBtn_wrap .gnbMobile .listBox #optionList { position: absolute; background-color: #fff; width:34%; height: 35px;  border-radius: 5px; border: 1px solid var(--bgcolor); font-family: 'MinSans-Medium'; font-size: 12px; text-align: center; }
     header .gnbBtn_wrap .gnbMobile .listBox #optionList option { background: var(--bgcolor); color: #fff; }
     header .gnbBtn_wrap .gnbMobile .listBox #optionList::-ms-expand { display: none; }
     header .gnbBtn_wrap .gnbMobile .listBox #optionList:focus { outline: none; }
     header .gnbBtn_wrap .gnbMobile .listBox #optionList:focus + .arrowIcon { animation:rotate 0.5s linear; transform: rotate(180deg); }
     @keyframes rotate { 0%{transform: rotate(0deg);} 100%{transform: rotate(180deg);} } 
-    header .gnbBtn_wrap .gnbMobile .listBox .arrowIcon { transform: rotate(0deg); z-index: 1; position: absolute; display: block; width: 10px; height: 10px; top: 12px; right: 3px; background: url(../img/down-arrow.png); background-size: cover; } 
+    header .gnbBtn_wrap .gnbMobile .listBox .arrowIcon { transform: rotate(0deg); z-index: 1; position: absolute; display: block; width: 10px; height: 10px; top: 12px; right: 4px; background: url(../img/down-arrow.png); background-size: cover; } 
     header .gnbBtn_wrap .gnbMobile .main_optionList>li:first-of-type { border-top: 1px solid #bebebe; }
     header .gnbBtn_wrap .gnbMobile .main_optionList>li { position: relative; border-bottom: 1px solid #bebebe; }
     header .gnbBtn_wrap .gnbMobile .main_optionList>li:hover a { color: var(--bgcolor);}
