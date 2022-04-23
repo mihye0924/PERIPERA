@@ -338,7 +338,7 @@ $(document).ready(function(){
     function onYouTubeIframeAPIReady(){
       player = new YT.Player('player',{ 
         videoId:'uiRcKpBGhhw',
-        playerVars : { 'autoplay' : 1,  'controls': 0, 'loop': 1, 'showinfo':0, 'disabledkb':1, 'modestbranding':1, 'origin': 'https://mihye0924.github.io/PERIPERA/' },
+        playerVars : { 'autoplay' : 1,  'controls': 0, 'loop': 1, 'showinfo':0, 'disabledkb':1, 'modestbranding':1, 'origin': 'https://mihye0924.github.io/PERIPERA/peripera' },
         events : { 'onReady' : onPlayerReady }
       });
 
