@@ -329,21 +329,22 @@ $(document).ready(function(){
             $(this).addClass("checked");
             $(chk).attr('checked','checked') 
           }
-        }) 
-         
-        var player;
-        
-        function onYouTubeIframeAPIReady(){
-          player = new YT.Player('player',{
-            width: '100%',
-            videoId:'uiRcKpBGhhw',
-            playerVars : { 'autoplay' : 1, 'playsinline' :1 },
-            events : { 'onReady' : onPlayerReady }
-          });
+        })  
+    }); //스크립트 마지막
 
-          function onPlayerReady(e){
-            e.target.mute();
-            e.target.playVideo();
-          }
-        }
-    })
+      
+    var player;
+        
+    function onYouTubeIframeAPIReady(){
+      player = new YT.Player('player',{
+        width: '100%',
+        videoId:'uiRcKpBGhhw',
+        playerVars : { 'autoplay' : 1, 'playsinline' :1 },
+        events : { 'onReady' : onPlayerReady }
+      });
+
+      function onPlayerReady(e){
+        e.target.mute();
+        e.target.playVideo();
+      }
+    }
