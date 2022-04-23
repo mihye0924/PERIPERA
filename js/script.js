@@ -334,18 +334,32 @@ $(document).ready(function(){
 
       
     var player;
-        
+    var player2;     
     function onYouTubeIframeAPIReady(){
-      player = new YT.Player('player',{
-        width: '780',
-        height: '480',
+      player = new YT.Player('player',{ 
         videoId:'uiRcKpBGhhw',
-        playerVars : { 'autoplay' : 1, 'playsinline' :1, 'controls': 0, 'loop': 1 },
+        playerVars : { 'autoplay' : 1,  'controls': 0, 'loop': 1, 'showinfo':0, 'disabledkb':1, 'modestbranding':1, 'origin': 'http://localhost:5500' },
         events : { 'onReady' : onPlayerReady }
       });
+
+      player2 = new YT.Player('player2',{ 
+        videoId:'0Sp4gLXorgY',
+        width: '100%',
+        height: '100%',
+        playerVars : { 'autoplay' : 1, 'playsinline' :1, 'controls': 0, 'loop': 1 },
+        events : { 'onReady' : onPlayerReady2 }
+      });
+
 
       function onPlayerReady(e){
         e.target.mute();
         e.target.playVideo();
       }
+      function onPlayerReady2(e){
+        e.target.mute();
+        e.target.playVideo();
+      }
     }
+
+   
+     

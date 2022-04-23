@@ -21,6 +21,8 @@ body::-webkit-scrollbar-thumb { background-color: #34343434; border-radius: 5px;
 a,p,span,h1,h2,h3,h4,h5,h6 { font-weight: 300;  text-decoration: none; font-size: 14px; color: #343434; font-family: 'MinSans-Medium'; letter-spacing: -2px; }
 li { list-style-type: none; }
  
+
+
 /* header */
 header { position: absolute; z-index: 3; width:100%; } 
 @keyframes slideDown { 0%{ top: -120px; } 100% { top: 0; } } 
@@ -146,6 +148,9 @@ header .gnbBtn_wrap { display: none; }
 #snb .snbSlide_wrap .customerBox li span:last-child { display: inline-block; width: 125px; text-align: end; }
 #snb .snbSlide_wrap .customerBox li:nth-of-type(4) span:last-child { text-align: start; }
 
+/* 모바일 main */
+#player,
+#player2 { display: none; }
 /* main */
 main { position: relative; z-index: 2;}
 main .main .main_wrap { position: relative; width: 100vw; height: 100vh; display: flex;  } 
@@ -428,8 +433,7 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     
     /* main */
     main .main .swiper-horizontal > .swiper-pagination-bullets, main .main .swiper-pagination-bullets.swiper-pagination-horizontal, main .main .swiper-pagination-custom, .swiper-pagination-fraction { width: 100%; padding: 0 40px; }
-    main .main .btnBox .playBtn, main .main .btnBox .pasueBtn { right:115px; bottom: -2px; }
-    main .main .main_wrap #video { width:270%; height: 130%; }
+    main .main .btnBox .playBtn, main .main .btnBox .pasueBtn { right:115px; bottom: -2px; } 
 
     /* best_wrap */
     .mainTitle { font-size: 28px; }
@@ -586,8 +590,7 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     
      
     
-    main .main .main_wrap { height: 65vh; }
-    main .main .main_wrap #video{ width: 170%; height: 110%; }
+    main .main .main_wrap { height: 65vh; } 
     main .main .swiper-horizontal > .swiper-pagination-bullets, main .main .swiper-pagination-bullets.swiper-pagination-horizontal, main .main .swiper-pagination-custom, .swiper-pagination-fraction { width: 100%; padding: 0 20px; }
     main .main .btnBox .playBtn, main .main .btnBox .pasueBtn { right: 95px; }
 
@@ -747,8 +750,7 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     header .gnbMoblieFooter li { width: 30px; height: 30px; }
     header .gnbMoblieFooter li img { width: 100%; height: 100% }
     
-    main .main .main_wrap { height: 60vh; }
-    main .main .main_wrap #video{ width: 195%; height: 110%; }
+    main .main .main_wrap { height: 60vh; } 
     main .main .swiper-horizontal > .swiper-pagination-bullets, main .main .swiper-pagination-bullets.swiper-pagination-horizontal, main .main .swiper-pagination-custom, .swiper-pagination-fraction { width: 100%; padding: 0 20px; }
     main .main .btnBox .playBtn, main .main .btnBox .pasueBtn { right: 95px; }
 
@@ -919,8 +921,13 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     header .gnbMoblieFooter li { width: 25px; height: 25px; }
     header .gnbMoblieFooter li img { width: 100%; height: 100% }
     
-    main .main .main_wrap { height: 50vh; }
-    main .main .main_wrap #video{ width: 230%; height: 120%; }
+
+    /* 모바일 main */
+    #player, #player2 { display: inline; pointer-events: none;   width: 100%; height: 100%; }
+    .ytp-chrome-top.ytp-show-cards-title,
+    a.ytp-watermark.yt-uix-sessionlink.ytp-watermark-small { display: none !important; }
+    #video { display: none; }
+    main .main .main_wrap { height:50vh; }  
     main .main .swiper-horizontal > .swiper-pagination-bullets, main .main .swiper-pagination-bullets.swiper-pagination-horizontal, main .main .swiper-pagination-custom, .swiper-pagination-fraction { width: 100%; padding: 0 20px; }
     main .main .btnBox .playBtn, main .main .btnBox .pasueBtn { right: 92px; }
 
