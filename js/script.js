@@ -331,10 +331,10 @@ $(document).ready(function(){
           }
         }) 
          
-        var video;
+        var player;
         
         function onYouTubeIframeAPIReady(){
-          video = new YT.Player('video',{
+          player = new YT.Player('player',{
             width: '100%',
             videoId:'uiRcKpBGhhw',
             playerVars : { 'autoplay' : 1, 'playsinline' :1 },
