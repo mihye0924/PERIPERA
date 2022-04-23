@@ -340,7 +340,7 @@ $(document).ready(function(){
         width: '780',
         height: '480',
         videoId:'uiRcKpBGhhw',
-        playerVars : { 'autoplay' : 1, 'playsinline' :1, 'controls': 0 },
+        playerVars : { 'autoplay' : 1, 'playsinline' :1, 'controls': 0, 'loop': 1 },
         events : { 'onReady' : onPlayerReady }
       });
 
