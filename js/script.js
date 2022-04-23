@@ -337,10 +337,10 @@ $(document).ready(function(){
         
     function onYouTubeIframeAPIReady(){
       player = new YT.Player('player',{
-        width: '270%',
-        height: '130%',
+        width: '780',
+        height: '480',
         videoId:'uiRcKpBGhhw',
-        playerVars : { 'autoplay' : 1, 'playsinline' :1 },
+        playerVars : { 'autoplay' : 1, 'playsinline' :1, 'controls': 0 },
         events : { 'onReady' : onPlayerReady }
       });
 
