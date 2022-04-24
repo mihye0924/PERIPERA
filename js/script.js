@@ -347,14 +347,14 @@ $(document).ready(function(){
     var player2;     
     function onYouTubeIframeAPIReady(){
       player = new YT.Player('player',{   
-        videoId:'uiRcKpBGhhw?playlist=uiRcKpBGhhw&autoplay=1&mute=1&loop=1&origin=https://mihye0924.github.io/PERIPERA',
-        playerVars : { 'autoplay' : 1,  'controls': 0, 'loop': 1, 'origin':'https://mihye0924.github.io/PERIPERA' },
+        videoId:'uiRcKpBGhhw?playlist=uiRcKpBGhhw&autoplay=1&mute=1&loop=1&origin=https://mihye0924.github.io/PERIPERA/peripera',
+        playerVars : { 'autoplay' : 1,  'controls': 0, 'loop': 1, 'origin':'https://mihye0924.github.io/PERIPERA/peripera' },
         events : { 'onReady' : onPlayerReady }
       });
 
       player2 = new YT.Player('player2',{ 
-        videoId:'0Sp4gLXorgY?playlist=0Sp4gLXorgY&autoplay=1&mute=1&loop=1&origin=https://mihye0924.github.io/PERIPERA', 
-        playerVars : { 'autoplay' : 1, 'controls': 0, 'loop': 1, 'origin':'https://mihye0924.github.io/PERIPERA' },
+        videoId:'0Sp4gLXorgY?playlist=0Sp4gLXorgY&autoplay=1&mute=1&loop=1&origin=https://mihye0924.github.io/PERIPERA/peripera', 
+        playerVars : { 'autoplay' : 1, 'controls': 0, 'loop': 1, 'origin':'https://mihye0924.github.io/PERIPERA/peripera' },
         events : { 'onReady' : onPlayerReady2 }
       });
 
