@@ -245,7 +245,7 @@ main .main .loginslide_wrap { position: sticky; top: 130px; height: 720px; margi
 #periMood_wrap .swiper-pagination-bullet, 
 #periMood_wrap .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet { margin: 0; }
 #periMood_wrap .swiper-pagination-bullet { border-radius: 0; width: 83.5px;  background:transparent; opacity: 1;  }
-#periMood_wrap .swiper-pagination-bullet-active { position: relative; top: -10px; background-color:  var(--bgcolor); height: 5px; border-radius: 25px; }
+#periMood_wrap .swiper-pagination-bullet-active { position: absolute; background-color:  var(--bgcolor); height: 5px; border-radius: 25px; }
 
 
 /* mdPick_wrap */ 
@@ -648,8 +648,7 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     #periMood_wrap .content li a { width: 100%; height: 380px; }
     #periMood_wrap .content li span { font-size: 18px; }
     #periMood_wrap .content li span:last-of-type { font-size: 14px; }  
-    #periMood_wrap .swiper-pagination-bullet { width:9.07%; }
-    #periMood_wrap .swiper-pagination-bullet-active { top: -9px; }
+    #periMood_wrap .swiper-pagination-bullet { width:9.07%; } 
 
      /* mdPick_wrap */
     #mdPick_wrap { padding: 0 20px; } 
@@ -825,8 +824,7 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     #periMood_wrap .content li a { width: 100%; height: 375px; }
     #periMood_wrap .content li span { font-size: 18px; }
     #periMood_wrap .content li span:last-of-type { font: 14px; }  
-    #periMood_wrap .swiper-pagination-bullet { width:9.09%; }
-    #periMood_wrap .swiper-pagination-bullet-active { top: -9px; }
+    #periMood_wrap .swiper-pagination-bullet { width:9.09%; } 
 
 
      /* mdPick_wrap */
@@ -1019,8 +1017,7 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     #periMood_wrap .content li a { width: 100%; height: 315px; }
     #periMood_wrap .content li span { font-size: 14px; }
     #periMood_wrap .content li span:last-of-type { width: 85px; font-size: 12px; }  
-    #periMood_wrap .swiper-pagination-bullet { width:9.090%; }
-    #periMood_wrap .swiper-pagination-bullet-active { top: -9px; }
+    #periMood_wrap .swiper-pagination-bullet { width:9.090%; } 
 
 
      /* mdPick_wrap */
