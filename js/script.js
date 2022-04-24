@@ -348,13 +348,13 @@ $(document).ready(function(){
       player = new YT.Player('player',{    
         videoId:'uiRcKpBGhhw',
         // origin : 가져올 서버의 주소를 입력
-        playerVars : { 'autoplay' : 1,  'controls': 0, 'loop': 1, 'origin' : 'mihye0924.github.io/PERIPERA/' },
+        playerVars : { 'autoplay' : 1,  'controls': 0, 'loop': 1, 'origin' : 'https://mihye0924.github.io/PERIPERA/' },
         events : { 'onReady' : onPlayerReady }
       });
 
       player2 = new YT.Player('player2',{  
         videoId:'0Sp4gLXorgY', 
-        playerVars : { 'autoplay' : 1, 'controls': 0, 'loop': 1, 'origin' : 'mihye0924.github.io/PERIPERA/' },
+        playerVars : { 'autoplay' : 1, 'controls': 0, 'loop': 1, 'origin' : 'https://mihye0924.github.io/PERIPERA/' },
         events : { 'onReady' : onPlayerReady2 }
       });
 
