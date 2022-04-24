@@ -342,19 +342,18 @@ $(document).ready(function(){
 
     }); //스크립트 마지막
 
-      
     var player;
     var player2;     
     function onYouTubeIframeAPIReady(){
-      player = new YT.Player('player',{   
-        videoId:'uiRcKpBGhhw?playlist=uiRcKpBGhhw&autoplay=1&mute=1&loop=1&origin=https://mihye0924.github.io/PERIPERA/peripera',
-        playerVars : { 'autoplay' : 1,  'controls': 0, 'loop': 1, 'origin':'https://mihye0924.github.io/PERIPERA/peripera' },
+      player = new YT.Player('player',{    
+        videoId:'uiRcKpBGhhw',
+        playerVars : { 'autoplay' : 1,  'controls': 0, 'loop': 1, 'origin' : 'https://mihye0924.github.io/PERIPERA/' },
         events : { 'onReady' : onPlayerReady }
       });
 
-      player2 = new YT.Player('player2',{ 
-        videoId:'0Sp4gLXorgY?playlist=0Sp4gLXorgY&autoplay=1&mute=1&loop=1&origin=https://mihye0924.github.io/PERIPERA/peripera', 
-        playerVars : { 'autoplay' : 1, 'controls': 0, 'loop': 1, 'origin':'https://mihye0924.github.io/PERIPERA/peripera' },
+      player2 = new YT.Player('player2',{  
+        videoId:'0Sp4gLXorgY', 
+        playerVars : { 'autoplay' : 1, 'controls': 0, 'loop': 1, 'origin' : 'https://mihye0924.github.io/PERIPERA/' },
         events : { 'onReady' : onPlayerReady2 }
       });
 
