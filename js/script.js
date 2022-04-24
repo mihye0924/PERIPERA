@@ -87,21 +87,18 @@ $(document).ready(function(){
  
 
     // 메인 넘어갈때 fixed gnb
-    var height = $('main').height()
-    var width = $(window).width()
-    console.log(width)
-    // console.log(height,'높이') 
+    var height = $('main').height() 
 
-    $(window).on('scroll',function(){
-      var top = $(this).scrollTop()  
+    $(window).on('scroll', function(){
+      var top = $(this).scrollTop() 
       if( top > height ) {   
           $('header .gnb_wrap_clone').addClass('fixed')  
           $('header .gnbBtn_wrap').addClass('fixed')
         }else{
           $('header .gnb_wrap_clone').removeClass('fixed') 
           $('header .gnbBtn_wrap').removeClass('fixed') 
-        }
-      })
+        } 
+    })
 
        // 엠디픽 옵션 버튼
       // mdPick btn
@@ -179,7 +176,7 @@ $(document).ready(function(){
       var qnaImg = document.querySelector(".qna > img"); 
 
       $('.quickbar-bg').on('click',function(){
-        $('#snb').animate({right:'-261px'},1000) 
+        $('#snb').animate({right:'-259'},1000) 
         $('#snb .snbSlide_wra').css({ boxShadow : 'unset'}) 
         $('#snb .snbBtn li').removeClass('active')
         $('.quickbar-bg').removeClass('active')
@@ -209,9 +206,9 @@ $(document).ready(function(){
       
       
       $('#snb .snbSlide_wrap ul.snbBtn li.kakao').on('click', function(){
-          $('#snb').animate({right:'-261px'},1000)
+          $('#snb').animate({right:'-259px'},1000)
 
-          $('#snb').animate({right:'-261px'},1000) 
+          $('#snb').animate({right:'-259px'},1000) 
           $('#snb .snbSlide_wrap').css({ boxShadow : 'unset'}) 
           $('#snb .snbBtn li.login').on('mouseover',function(){ 
             $(this).removeClass('active')
@@ -224,9 +221,7 @@ $(document).ready(function(){
           $('#snb .snbBtn li.qna').on('mouseover',function(){ 
             $(this).removeClass('active')
             qnaImg.src='./img/qna.png'
-          }) 
- 
-
+          })  
         }) 
 
       // 네비 모바일, 태블릿 토글버튼
@@ -235,6 +230,7 @@ $(document).ready(function(){
         $('.closeBtn').css({display:'block'}).addClass('animate') 
         $('.gnbBtn_wrap').addClass('active')
         $(this).css({display:'none'})  
+        $('#bottomBtn_wrap').css({ opacity: 0})
       })
 
        
@@ -243,6 +239,7 @@ $(document).ready(function(){
         $('.openBtn').css({display:'block'}).addClass('animate')
         $('.gnbBtn_wrap').removeClass('active') 
         $(this).css({display:'none'}) 
+        $('#bottomBtn_wrap').css({ opacity: 1})
       })
  
       //  네비 모바일, 태블릿 옵션
@@ -319,7 +316,7 @@ $(document).ready(function(){
 
       // 셀렉트 박스 커스텀   
       var chk = $("input[type=checkbox]");
-      console.log(chk)
+      // console.log(chk)
         $('#optionList').on('click',function(){  
           if ($(this).hasClass("checked")) {
             $("#optionList").removeClass("checked");  
@@ -330,6 +327,19 @@ $(document).ready(function(){
             $(chk).attr('checked','checked') 
           }
         })  
+
+        
+        var scrollHeight = $(document).height();
+        var ftHeight = $('#footer_wrap').height(); 
+        $(window).on('scroll',function(){
+          var scrollPosition = $(window).height() + $(window).scrollTop();
+          if(scrollHeight < scrollPosition+ftHeight){
+            $('#bottomBtn_wrap').addClass('animate__bottom') 
+          }else{
+            $('#bottomBtn_wrap').removeClass('animate__bottom') 
+          }  
+        })
+
     }); //스크립트 마지막
 
       
@@ -337,16 +347,14 @@ $(document).ready(function(){
     var player2;     
     function onYouTubeIframeAPIReady(){
       player = new YT.Player('player',{ 
-        videoId:'uiRcKpBGhhw',
-        playerVars : { 'autoplay' : 1,  'controls': 0, 'loop': 1, 'showinfo':0, 'disabledkb':1, 'modestbranding':1, 'origin':'https://localhost:5500' },
+        videoId:'uiRcKpBGhhw?playlist=uiRcKpBGhhw&autoplay=1&mute=1&loop=1',
+        playerVars : { 'autoplay' : 1,  'controls': 0, 'loop': 1 },
         events : { 'onReady' : onPlayerReady }
       });
 
       player2 = new YT.Player('player2',{ 
-        videoId:'0Sp4gLXorgY',
-        width: '100%',
-        height: '100%',
-        playerVars : { 'autoplay' : 1, 'playsinline' :1, 'controls': 0, 'loop': 1,'origin':'http://localhost:5500' },
+        videoId:'0Sp4gLXorgY?playlist=0Sp4gLXorgY&autoplay=1&mute=1&loop=1', 
+        playerVars : { 'autoplay' : 1, 'controls': 0, 'loop': 1 },
         events : { 'onReady' : onPlayerReady2 }
       });
 
