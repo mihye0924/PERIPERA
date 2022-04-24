@@ -338,7 +338,7 @@ $(document).ready(function(){
     function onYouTubeIframeAPIReady(){
       player = new YT.Player('player',{ 
         videoId:'uiRcKpBGhhw',
-        playerVars : { 'autoplay' : 1,  'controls': 0, 'loop': 1, 'showinfo':0, 'disabledkb':1, 'modestbranding':1, 'origin': 'https://mihye0924.github.io/PERIPERA/peripera' },
+        playerVars : { 'autoplay' : 1,  'controls': 0, 'loop': 1, 'showinfo':0, 'disabledkb':1, 'modestbranding':1, 'origin':'https://localhost:5500' },
         events : { 'onReady' : onPlayerReady }
       });
 
@@ -346,7 +346,7 @@ $(document).ready(function(){
         videoId:'0Sp4gLXorgY',
         width: '100%',
         height: '100%',
-        playerVars : { 'autoplay' : 1, 'playsinline' :1, 'controls': 0, 'loop': 1 },
+        playerVars : { 'autoplay' : 1, 'playsinline' :1, 'controls': 0, 'loop': 1,'origin':'http://localhost:5500' },
         events : { 'onReady' : onPlayerReady2 }
       });
 
