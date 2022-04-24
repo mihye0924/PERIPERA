@@ -447,7 +447,7 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     @keyframes slideTop { 0% { bottom: 200px; } 100%{ bottom: 0;} }
     
     /* main */ 
-    main .main .main_wrap #video { width:245%; } 
+    main .main .main_wrap #video { width:255%; } 
     main .main .swiper-horizontal > .swiper-pagination-bullets, main .main .swiper-pagination-bullets.swiper-pagination-horizontal, main .main .swiper-pagination-custom, .swiper-pagination-fraction { width: 85%; padding: 0 40px; }
     main .main .btnBox .playBtn, main .main .btnBox .pasueBtn { right:115px; bottom: -2px; } 
 
@@ -615,7 +615,7 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     @keyframes slideTop { 0% { bottom: 200px; } 100%{ bottom: 0;} }
      
     /* main */
-    main .main .main_wrap { height: 65vh; } 
+    main .main .main_wrap { height: 60vh; } 
     main .main .main_wrap #video { width:190%; height: 115%; }  
     main .main .swiper-horizontal > .swiper-pagination-bullets, main .main .swiper-pagination-bullets.swiper-pagination-horizontal, main .main .swiper-pagination-custom, .swiper-pagination-fraction { width: 100%; padding: 0 20px; }
     main .main .btnBox .playBtn, main .main .btnBox .pasueBtn { right: 95px; }
@@ -874,7 +874,7 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     /* header */
     header .gnb_wrap, header .gnb_wrap_clone.fixed, #snb, #video, #bottomBtn_wrap { display: none; }
     header { height: 65px; }
-    header .logo { width: 115px; height: 45px; }
+    header .logo { width: 115px; height: 40px; }
 
     
     /* gnbBtn_ative */
@@ -963,9 +963,9 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
 
     /* mobile main */
     #player, #player2 { display: inline; pointer-events: none; width: 100%; height: 100%; }  
-    main .main .main_wrap { height: 234px }  
+    main .main .main_wrap { height: 250px; }  
     main .main .main_wrap #player,
-    main .main .main_wrap #player2 { position: absolute; width: 100%;  } 
+    main .main .main_wrap #player2 { position: absolute; width: 120%; height: 460px; margin-top:-105px; margin-left: -45px; } 
     main .main .swiper-horizontal > .swiper-pagination-bullets, main .main .swiper-pagination-bullets.swiper-pagination-horizontal, main .main .swiper-pagination-custom, .swiper-pagination-fraction { width: 100%; padding: 0 20px; }
     main .main .btnBox { height: 30px; }
     main .main .btnBox .playBtn, main .main .btnBox .pasueBtn { right: 92px; }
