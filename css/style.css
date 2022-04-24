@@ -148,9 +148,12 @@ header .gnbBtn_wrap { display: none; }
 #snb .snbSlide_wrap .customerBox li span:last-child { display: inline-block; width: 125px; text-align: end; }
 #snb .snbSlide_wrap .customerBox li:nth-of-type(4) span:last-child { text-align: start; }
 
-/* 모바일 main */
+/* 모바일 main, fnb_wrap */
 #player,
-#player2 { display: none; }
+#player2,
+#fnb_wrap { display: none; }
+
+
 /* main */
 main { position: relative; z-index: 2;}
 main .main .main_wrap { position: relative; width: 100vw; height: 100vh; display: flex;  } 
@@ -936,7 +939,7 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
  
 
     /* 모바일 fnb */
-    #fnb_wrap {  position: fixed; width: 100%; z-index: 3; bottom: 0; background:linear-gradient( #F2603D ,var(--bgcolor)); }
+    #fnb_wrap { display: block; position: fixed; width: 100%; z-index: 3; bottom: 0; background:linear-gradient( #F2603D ,var(--bgcolor)); }
     #fnb_wrap .fnb_inner  { display: flex; width: 100%; height: 80px; justify-content: space-evenly; margin-top: 15px; } 
     #fnb_wrap .fnb_inner li { width: 40px; height: 40px; }
     /* #fnb_wrap .fnb_inner li span */
