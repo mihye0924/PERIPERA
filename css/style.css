@@ -1010,8 +1010,8 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     #banner_wrap .content img {width: 100%; height: 100%; object-fit: cover; object-position:98%; }
 
 
-    /* footer */
-    footer #footer_wrap { width: 100%; padding: 0 20px; justify-content: unset; text-align: center; } 
+    /* footer */ 
+    footer #footer_wrap { width: 100%; height: 200px; padding: 0 20px; margin-bottom: 80px; justify-content: unset; text-align: center; } 
     footer #footer_wrap .inner_left { display: none; }
     footer #footer_wrap .inner_right { width: 100%; }
     footer #footer_wrap .inner_right .address { width: 130px; height: 45px; float: unset; }
