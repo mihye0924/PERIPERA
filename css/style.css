@@ -157,8 +157,8 @@ header .gnbBtn_wrap { display: none; }
 
 /* main */
 main { position: relative; z-index: 2;}
-main .main .main_wrap { position: relative; width: 100vw; height: 100vh; display: flex;  } 
-main .main .main_wrap #video { pointer-events: none; position: absolute; width: 215%; height: 130%; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+main .main .main_wrap { position: relative; width: 100vw; height: 1080px; display: flex;  } 
+main .main .main_wrap #video { pointer-events: none; position: absolute; width: 215%; min-height: 1080px; top: 50%; top: 50%; left: 50%; transform: translate(-50%,-50%); }
 main .main .btnBox { display: block;  position: absolute; z-index: 3; width: 100%; height: 50px; bottom: 0; right: 0; }
 main .main .btnBox .playBtn,
 main .main .btnBox .pasueBtn { width: 20px; height: 20px; border-radius: 25px; position: absolute; border: 2px solid #fff; display: inline-block; right: 75px; box-shadow: 0px 0px 4px rgba(82, 82, 82, 0.52);  }
@@ -447,7 +447,7 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     @keyframes slideTop { 0% { bottom: 200px; } 100%{ bottom: 0;} }
     
     /* main */ 
-    main .main .main_wrap #video { width:220%; height: 115%; } 
+    main .main .main_wrap #video { width:245%; } 
     main .main .swiper-horizontal > .swiper-pagination-bullets, main .main .swiper-pagination-bullets.swiper-pagination-horizontal, main .main .swiper-pagination-custom, .swiper-pagination-fraction { width: 85%; padding: 0 40px; }
     main .main .btnBox .playBtn, main .main .btnBox .pasueBtn { right:115px; bottom: -2px; } 
 
@@ -787,8 +787,8 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     @keyframes slideTop { 0% { bottom: 200px; } 100%{ bottom: 0;} }
 
     /* main */
-    main .main .main_wrap { height: 60vh; }  
-    main .main .main_wrap #video { width:215%; height: 115%; } 
+    main .main .main_wrap { height: 50vh; }  
+    main .main .main_wrap #video { width:180%; height: 100%; } 
     main .main .swiper-horizontal > .swiper-pagination-bullets, main .main .swiper-pagination-bullets.swiper-pagination-horizontal, main .main .swiper-pagination-custom, .swiper-pagination-fraction { width: 100%; padding: 0 20px; }
     main .main .btnBox .playBtn, main .main .btnBox .pasueBtn { right: 95px; }
 
@@ -872,7 +872,7 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     a, p, span, h1, h2, h3, h4, h5, h6 { font-size: 12px; }
 
     /* header */
-    header .gnb_wrap, header .gnb_wrap_clone.fixed, #snb { display: none; }
+    header .gnb_wrap, header .gnb_wrap_clone.fixed, #snb, #video, #bottomBtn_wrap { display: none; }
     header { height: 65px; }
     header .logo { width: 115px; height: 45px; }
 
@@ -962,13 +962,10 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     
 
     /* mobile main */
-    #player, #player2 { display: inline; pointer-events: none;   width: 100%; height: 100%; }
-    .ytp-chrome-top.ytp-show-cards-title,
-    a.ytp-watermark.yt-uix-sessionlink.ytp-watermark-small { display: none !important; }
-    #video, #bottomBtn_wrap { display: none; }
-    main .main .main_wrap { height:50vh; }  
+    #player, #player2 { display: inline; pointer-events: none;   width: 100%; height: 100%; }  
+    main .main .main_wrap { height: 248px }  
     main .main .main_wrap #player,
-    main .main .main_wrap #player2 { width:158%; height: 100%; } 
+    main .main .main_wrap #player2 { position: absolute; width:100%; height: 480px; margin-top: -115px;  } 
     main .main .swiper-horizontal > .swiper-pagination-bullets, main .main .swiper-pagination-bullets.swiper-pagination-horizontal, main .main .swiper-pagination-custom, .swiper-pagination-fraction { width: 100%; padding: 0 20px; }
     main .main .btnBox .playBtn, main .main .btnBox .pasueBtn { right: 92px; }
  
