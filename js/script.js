@@ -318,16 +318,17 @@ $(document).ready(function(){
       var chk = $("input[type=checkbox]");
       // console.log(chk)
         $('#optionList').on('click',function(){  
-          if ($(this).hasClass("checked")) {
-            $("#optionList").removeClass("checked");  
-            $(chk).removeAttr('checked') 
+          if ($(".listBox").hasClass("checked")) {
+            $(".listBox").removeClass("checked");  
+            $(chk).removeAttr('checked')  
+          
           }else {
-            $("#optionList").removeClass("checked");
-            $(this).addClass("checked");
-            $(chk).attr('checked','checked') 
-          }
+            $(".listBox").removeClass("checked");
+            $(".listBox").addClass("checked");
+            $(chk).attr('checked','checked')    
+          } 
         })  
-
+ 
         
         var scrollHeight = $(document).height();
         var ftHeight = $('#footer_wrap').height(); 
