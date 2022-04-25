@@ -244,7 +244,7 @@ main .main .loginslide_wrap { position: sticky; top: 130px; height: 720px; margi
 #periMood_wrap .swiper-horizontal>.swiper-pagination-bullets 
 #periMood_wrap .swiper-pagination-bullet, 
 #periMood_wrap .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet { margin: 0; }
-#periMood_wrap .swiper-pagination-bullet { border-radius: 0; width: 83.5px;  background:transparent; opacity: 1;  }
+#periMood_wrap .swiper-pagination-bullet { border-radius: 0; width: 84.5px;  background:transparent; opacity: 1;  }
 #periMood_wrap .swiper-pagination-bullet-active { position: absolute; background-color:  var(--bgcolor); height: 5px; border-radius: 25px; }
 
 
