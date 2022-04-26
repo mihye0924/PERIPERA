@@ -771,7 +771,7 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='login'] { background-color: var(--bgcolor); color: #fff; }
     header .gnbBtn_wrap .gnbMobile .listBox { z-index: 1; position: absolute; width: 32%; right: 0; } 
     header .gnbBtn_wrap .gnbMobile .listBox li:not(.familysite)  { display: none; }
-    header .gnbBtn_wrap .gnbMobile .listBox li.familysite { text-align: center; height: 50px; line-height: 50px; background-color: transparent; border: 1px solid var(--bgcolor); border-radius: 5px; }
+    header .gnbBtn_wrap .gnbMobile .listBox li.familysite { text-align: center; height: 50px; line-height: 45px; background-color: transparent; border: 1px solid var(--bgcolor); border-radius: 5px; }
     header .gnbBtn_wrap .gnbMobile .listBox li.familysite span {  font-size: 12px; }
     header .gnbBtn_wrap .gnbMobile .listBox.checked li:not(.familysite) { display: block; height: 50px; line-height: 50px; right: 0; text-align: center; background-color: var(--bgcolor); border-bottom: 1px solid #fff; }
     header .gnbBtn_wrap .gnbMobile .listBox.checked li:not(.familysite) span { color: #fff; }
