@@ -314,22 +314,49 @@ $(document).ready(function(){
       })
 
 
-      // 셀렉트 박스 커스텀   
-      var chk = $("input[type=checkbox]");
-      // console.log(chk)
-        $('#optionList').on('click',function(){  
-          if ($(".listBox").hasClass("checked")) {
-            $(".listBox").removeClass("checked");  
-            $(chk).removeAttr('checked')  
-          
-          }else {
-            $(".listBox").removeClass("checked");
-            $(".listBox").addClass("checked");
-            $(chk).attr('checked','checked')    
-          } 
-        })  
+      // 셀렉트 박스 커스텀    
+        $('.optionList').on('click',function(){  
+          if ($('.listBox').hasClass("checked")) { 
+            $(".listBox").removeClass("checked");   
+            
+          }else { 
+            $(".listBox").addClass("checked")   
+            }  
+        })   
  
+
+     
         
+        var gnbBtn = $('.gnbMobile:not(div)')
+        var clio = $('.optionList .clio') 
+        var clubclio = $('.optionList .clubclio') 
+        var clioCompany = $('.optionList .clioCompany') 
+        var godal = $('.optionList .godal') 
+        var thematree = $('.optionList .thematree') 
+        var truerx = $('.optionList .truerx') 
+        $(gnbBtn).on('click',function(){ 
+          $(".listBox").removeClass("checked");   
+      })
+        $(clio).on('click',function(){ 
+            document.querySelector('.familysite span').textContent ='(주)클리오'  
+        })
+        $(clubclio).on('click',function(){ 
+          document.querySelector('.familysite span').textContent ='클럽클리오'  
+        })
+        $(clioCompany).on('click',function(){ 
+          document.querySelector('.familysite span').textContent ='클리오기업소개'  
+        })
+        $(godal).on('click',function(){ 
+          document.querySelector('.familysite span').textContent ='구달'  
+        })
+        $(thematree).on('click',function(){ 
+          document.querySelector('.familysite span').textContent ='더마트리'  
+        })
+        $(truerx).on('click',function(){ 
+          document.querySelector('.familysite span').textContent ='트루알엑스'  
+        })
+
+        // 태블릿,모바일 시 bottom kakao & top 
         var scrollHeight = $(document).height();
         var ftHeight = $('#footer_wrap').height(); 
         $(window).on('scroll',function(){

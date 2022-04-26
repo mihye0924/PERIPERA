@@ -96,7 +96,7 @@ header .gnbBtn_wrap { display: none; }
 #snb .quickbar ul.snbBtn li img {  display:block; width: 25px; height: 25px; margin: 12px auto; line-height: 1.2; }
 #snb .quickbar ul.snbBtn li.top .topBtn { position: absolute; width: 100%; height: 100%; top: 55%; left: 55%; transform: translate(-50%,-50%); }
 #snb .quickbar ul.snbBtn li.top img { width: 35px; height: 35px; margin: 7px auto; }
-#snb .quickbar ul.snbBtn li.top .topBtn span {  font-size: 12px; letter-spacing: 0; position: absolute; top: 55%; left: 50%; transform: translate(-50%,-50%); color: #fff; } 
+#snb .quickbar ul.snbBtn li.top .topBtn span {  font-size: 11px; letter-spacing: 0; position: absolute; top: 53%; left: 50%; transform: translate(-50%,-50%); color: #fff; } 
 #snb .snbSlide_wrap { width: 260px; right: 0; height: 100%; background-color: #fff; position: absolute; border-left: 1px solid #bebebe; }
 #snb .snbSlide_wrap .inner { position: relative;  top: 50%; left: 50%; transform: translate(-50%, -50%); height: 745px; z-index: 2; }
 #snb .snbSlide_wrap .inner form { width: 200px; margin: 0 auto; } 
@@ -157,8 +157,8 @@ header .gnbBtn_wrap { display: none; }
 
 /* main */
 main { position: relative; z-index: 2;}
-main .main .main_wrap {position: relative; width: 100vw; height: 1080px; display: flex;  } 
-main .main .main_wrap #video { pointer-events: none; position: absolute; width: 265%; min-height: 1200px;top: 50%; left: 50%; transform: translate(-50%,-50%); }
+main .main .main_wrap {position: relative; width: 100vw; height: 100vh; display: flex; } 
+main .main .main_wrap #video { pointer-events: none; position: absolute; width: 265%; min-height: 1580px;top: 50%; left: 50%; transform: translate(-50%,-50%); }
 main .main .btnBox { display: block;  position: absolute; z-index: 3; width: 100%; height: 50px; bottom: 0; right: 0; }
 main .main .btnBox .playBtn,
 main .main .btnBox .pasueBtn { width: 20px; height: 20px; border-radius: 25px; position: absolute; border: 2px solid #fff; display: inline-block; right: 75px; box-shadow: 0px 0px 4px rgba(82, 82, 82, 0.52);  }
@@ -413,21 +413,21 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     header .gnbBtn_wrap .gnbMobile input#searchMtext { font-size: 18px; width: 100%; height: 45px; padding: 15px;  border: 0; }
     header .gnbBtn_wrap .gnbMobile input#searchMtext:focus { outline: 0; }
     header .gnbBtn_wrap .gnbMobile input#searchMImg { width: 30px; height: 30px; margin-right: 15px; }
-    header .gnbBtn_wrap .gnbMobile .loginJoinBox { width: 100%; height: 60px;}
+    header .gnbBtn_wrap .gnbMobile .loginJoinBox { position: relative; width: 100%; height: 60px;}
     header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='login'],
     header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='join'] { font-family: 'MinSans-Medium'; font-size: 17px; margin-right: 10px; float: left; width: 33%; height: 55px; background-color: transparent; border: 1px solid var(--bgcolor); border-radius: 5px; }
     header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='login'] { background-color: var(--bgcolor); color: #fff; }
-    header .gnbBtn_wrap .gnbMobile .listBox { position: relative; }  
-    header .gnbBtn_wrap .gnbMobile input#chk { position: absolute; z-index: 1; display: none; }   
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList { position: absolute; background-color: #fff; width:32%; height: 55px;  border-radius: 5px; border: 1px solid var(--bgcolor); font-family: 'MinSans-Medium'; font-size: 17px; text-align: center; }
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList option { background: var(--bgcolor); color: #fff; }
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList::-ms-expand { display: none; } 
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList:focus { outline: none; }
-    /* header .gnbBtn_wrap .gnbMobile .listBox #optionList:focus + .arrowIcon { animation:rotate 0.5s linear; transform: rotate(180deg); }   */
-    header .gnbBtn_wrap .gnbMobile .listBox.checked .arrowIcon { animation:rotate 0.5s linear; transform: rotate(180deg); }
-    header .gnbBtn_wrap .gnbMobile .listBox .arrowIcon { z-index: 1; position: absolute; display: block; width: 15px; height: 15px; top: 20px; right: 4%; background: url(../img/down-arrow.png); background-size: cover; } 
-    @keyframes rotate { 0%{transform: rotate(0deg);} 100% {transform: rotate(180deg);} }  
-    @keyframes rotate2 { 0%{transform: rotate(180deg);} 100% {transform: rotate(0deg);} }   
+    
+    header .gnbBtn_wrap .gnbMobile .listBox { z-index: 1; position: absolute; width: 31%; right: 0; } 
+    header .gnbBtn_wrap .gnbMobile .listBox li:not(.familysite)  { display: none; }
+    header .gnbBtn_wrap .gnbMobile .listBox li.familysite { text-align: center; height: 55px; line-height: 55px; background-color: transparent; border: 1px solid var(--bgcolor); border-radius: 5px; }
+    header .gnbBtn_wrap .gnbMobile .listBox li.familysite span {  font-size: 17px; }
+    header .gnbBtn_wrap .gnbMobile .listBox.checked li:not(.familysite) { display: block; height: 55px; line-height: 55px; right: 0; text-align: center; background-color: var(--bgcolor); border-bottom: 1px solid #fff; }
+    header .gnbBtn_wrap .gnbMobile .listBox.checked li:not(.familysite) span { color: #fff; }
+    header .gnbBtn_wrap .gnbMobile .listBox.checked .arrowIcon { animation: slideup 0.5s linear; animation-fill-mode: forwards;}
+    @keyframes slideup { 0%{ transform: rotate(0deg); } 100%{ transform: rotate(180deg);}}
+    header .gnbBtn_wrap .gnbMobile .listBox .arrowIcon { position: absolute; width: 15px; height: 15px; top:20px; right: 10%; background: url(../img/down-arrow.png) no-repeat center; display: block; background-size: cover; }
+    
     header .gnbBtn_wrap .gnbMobile .main_optionList>li.active a { color: var(--bgcolor); } 
     header .gnbBtn_wrap .gnbMobile .main_optionList>li:first-of-type { border-top: 1px solid #bebebe; }
     header .gnbBtn_wrap .gnbMobile .main_optionList>li { position: relative; border-bottom: 1px solid #bebebe; }
@@ -446,7 +446,6 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     #bottomBtn_wrap ul { display: flex; height: 190px; flex-direction: column; align-items: center; justify-content: space-evenly; }
     #bottomBtn_wrap ul li { width: 60px; height: 60px; }
     #bottomBtn_wrap ul li.topBtn { position: relative; width: 60px; height: 60px;  }
-    /* #bottomBtn_wrap ul li.topBtn a { display: block; z-index: 3;} */
     #bottomBtn_wrap ul li span { cursor:default; display: block; color: #fff; font-size: 15px; letter-spacing: -1px; position: absolute; top: 55%; left: 50%; transform: translate(-50%,-50%);}
     #bottomBtn_wrap ul li img { width: 100%; height: 100%; }
     #bottomBtn_wrap.animate__bottom { animation: slideBottom 0.5s ease-out; bottom: 200px; }
@@ -590,19 +589,19 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     header .gnbBtn_wrap .gnbMobile input#searchMtext { font-size: 18px; width: 100%; height: 45px; padding: 15px;  border: 0; }
     header .gnbBtn_wrap .gnbMobile input#searchMtext:focus { outline: 0; }
     header .gnbBtn_wrap .gnbMobile input#searchMImg { width: 30px; height: 30px; margin-right: 15px; }
-    header .gnbBtn_wrap .gnbMobile .loginJoinBox { width: 100%; height: 60px;}
+    header .gnbBtn_wrap .gnbMobile .loginJoinBox { position: relative; width: 100%; height: 60px; }
     header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='login'],
     header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='join'] { font-family: 'MinSans-Medium'; font-size: 17px; margin-right: 10px; float: left; width: 32%; height: 55px; background-color: transparent; border: 1px solid var(--bgcolor); border-radius: 5px; }
     header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='login'] {  background-color: var(--bgcolor); color: #fff; }
-    header .gnbBtn_wrap .gnbMobile .listBox { position: relative; }  
-    header .gnbBtn_wrap .gnbMobile input#chk { position: absolute; z-index: 1; display: none; }   
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList { position: absolute; background-color: #fff; width:33%; height: 55px;  border-radius: 5px; border: 1px solid var(--bgcolor); font-family: 'MinSans-Medium'; font-size: 17px; text-align: center; }
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList option { background: var(--bgcolor); color: #fff; }
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList::-ms-expand { display: none; }
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList:focus { outline: none; }
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList:focus + .arrowIcon { animation:rotate 0.5s linear; transform: rotate(180deg); }
-    @keyframes rotate { 0%{transform: rotate(0deg);} 100%{transform: rotate(180deg);} } 
-    header .gnbBtn_wrap .gnbMobile .listBox .arrowIcon { transform: rotate(0deg); z-index: 1; position: absolute; display: block; width: 15px; height: 15px; top: 20px; right:2%; background: url(../img/down-arrow.png); background-size: cover; } 
+    header .gnbBtn_wrap .gnbMobile .listBox { z-index: 1; position: absolute; width: 32%; right: 0; } 
+    header .gnbBtn_wrap .gnbMobile .listBox li:not(.familysite)  { display: none; }
+    header .gnbBtn_wrap .gnbMobile .listBox li.familysite { text-align: center; height: 55px; line-height: 55px; background-color: transparent; border: 1px solid var(--bgcolor); border-radius: 5px; }
+    header .gnbBtn_wrap .gnbMobile .listBox li.familysite span {  font-size: 17px; }
+    header .gnbBtn_wrap .gnbMobile .listBox.checked li:not(.familysite) { display: block; height: 55px; line-height: 55px; right: 0; text-align: center; background-color: var(--bgcolor); border-bottom: 1px solid #fff; }
+    header .gnbBtn_wrap .gnbMobile .listBox.checked li:not(.familysite) span { color: #fff; }
+    header .gnbBtn_wrap .gnbMobile .listBox.checked .arrowIcon { animation: slideup 0.5s linear; animation-fill-mode: forwards;}
+    @keyframes slideup { 0%{ transform: rotate(0deg); } 100%{ transform: rotate(180deg);}}
+    header .gnbBtn_wrap .gnbMobile .listBox .arrowIcon { position: absolute; width: 15px; height: 15px; top:20px; right: 10%; background: url(../img/down-arrow.png) no-repeat center; display: block; background-size: cover; }
     header .gnbBtn_wrap .gnbMobile .main_optionList>li:first-of-type { border-top: 1px solid #bebebe; }
     header .gnbBtn_wrap .gnbMobile .main_optionList>li { position: relative; border-bottom: 1px solid #bebebe; }
     header .gnbBtn_wrap .gnbMobile .main_optionList>li:hover a { color: var(--bgcolor);} 
@@ -766,19 +765,20 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     header .gnbBtn_wrap .gnbMobile input#searchMtext { font-size: 18px; width: 100%; height: 45px; padding: 15px;  border: 0; }
     header .gnbBtn_wrap .gnbMobile input#searchMtext:focus { outline: 0; }
     header .gnbBtn_wrap .gnbMobile input#searchMImg { width: 30px; height: 30px; margin-right: 15px; }
-    header .gnbBtn_wrap .gnbMobile .loginJoinBox { width: 100%; height: 60px;}
+    header .gnbBtn_wrap .gnbMobile .loginJoinBox { position: relative; width: 100%; height: 60px;}
     header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='login'],
-    header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='join'] { font-family: 'MinSans-Medium'; font-size: 12px; margin-right: 10px; float: left; width: 30%; height: 50px; background-color: transparent; border: 1px solid var(--bgcolor); border-radius: 5px; }
+    header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='join'] { font-family: 'MinSans-Medium'; font-size: 12px; margin-right: 10px; float: left; width: 32%; height: 50px; background-color: transparent; border: 1px solid var(--bgcolor); border-radius: 5px; }
     header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='login'] { background-color: var(--bgcolor); color: #fff; }
-    header .gnbBtn_wrap .gnbMobile .listBox { position: relative; }  
-    header .gnbBtn_wrap .gnbMobile input#chk { position: absolute; z-index: 1; display: none; }   
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList { position: absolute; background-color: #fff; width:36%; height: 50px;  border-radius: 5px; border: 1px solid var(--bgcolor); font-family: 'MinSans-Medium'; font-size: 12px; text-align: center; }
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList option { background: var(--bgcolor); color: #fff; }
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList::-ms-expand { display: none; }
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList:focus { outline: none; }
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList:focus + .arrowIcon { animation:rotate 0.5s linear; transform: rotate(180deg); }
-    @keyframes rotate { 0%{transform: rotate(0deg);} 100%{transform: rotate(180deg);} } 
-    header .gnbBtn_wrap .gnbMobile .listBox .arrowIcon { transform: rotate(0deg); z-index: 1; position: absolute; display: block; width: 10px; height: 10px; top: 20px; right: 20px; background: url(../img/down-arrow.png); background-size: cover; } 
+    header .gnbBtn_wrap .gnbMobile .listBox { z-index: 1; position: absolute; width: 32%; right: 0; } 
+    header .gnbBtn_wrap .gnbMobile .listBox li:not(.familysite)  { display: none; }
+    header .gnbBtn_wrap .gnbMobile .listBox li.familysite { text-align: center; height: 50px; line-height: 50px; background-color: transparent; border: 1px solid var(--bgcolor); border-radius: 5px; }
+    header .gnbBtn_wrap .gnbMobile .listBox li.familysite span {  font-size: 12px; }
+    header .gnbBtn_wrap .gnbMobile .listBox.checked li:not(.familysite) { display: block; height: 50px; line-height: 50px; right: 0; text-align: center; background-color: var(--bgcolor); border-bottom: 1px solid #fff; }
+    header .gnbBtn_wrap .gnbMobile .listBox.checked li:not(.familysite) span { color: #fff; }
+    header .gnbBtn_wrap .gnbMobile .listBox.checked .arrowIcon { animation: slideup 0.5s linear; animation-fill-mode: forwards;}
+    @keyframes slideup { 0%{ transform: rotate(0deg); } 100%{ transform: rotate(180deg);}}
+    header .gnbBtn_wrap .gnbMobile .listBox .arrowIcon { position: absolute; width: 10px; height: 10px; top:20px; right: 10%; background: url(../img/down-arrow.png) no-repeat center; display: block; background-size: cover; }
+
     header .gnbBtn_wrap .gnbMobile .main_optionList>li:first-of-type { border-top: 1px solid #bebebe; }
     header .gnbBtn_wrap .gnbMobile .main_optionList>li { position: relative; border-bottom: 1px solid #bebebe; }
     header .gnbBtn_wrap .gnbMobile .main_optionList>li:hover a { color: var(--bgcolor);}
@@ -950,19 +950,21 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     header .gnbBtn_wrap .gnbMobile input#searchMtext { font-size: 12px; width: 100%; height: 45px; padding: 15px;  border: 0; }
     header .gnbBtn_wrap .gnbMobile input#searchMtext:focus { outline: 0; }
     header .gnbBtn_wrap .gnbMobile input#searchMImg { width: 20px; height: 20px; margin-right: 15px; }
-    header .gnbBtn_wrap .gnbMobile .loginJoinBox { width: 100%; height: 60px;}
+    header .gnbBtn_wrap .gnbMobile .loginJoinBox {  position:relative; width: 100%; height: 60px;}
     header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='login'],
-    header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='join'] { font-family: 'MinSans-Medium'; font-size: 12px; margin-right: 10px; float: left; width: 31%; height: 35px; background-color: transparent; border: 1px solid var(--bgcolor); border-radius: 5px; }
+    header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='join'] { font-family: 'MinSans-Medium'; font-size: 12px; margin-right: 10px; float: left; width: 32%; height: 35px; background-color: transparent; border: 1px solid var(--bgcolor); border-radius: 5px; }
     header .gnbBtn_wrap .gnbMobile .loginJoinBox input[id='login'] { background-color: var(--bgcolor); color: #fff; }
-    header .gnbBtn_wrap .gnbMobile .listBox { position: relative; }  
-    header .gnbBtn_wrap .gnbMobile input#chk { position: absolute; z-index: 1; display: none; }   
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList { position: absolute; background-color: #fff; width:33%; height: 35px;  border-radius: 5px; border: 1px solid var(--bgcolor); font-family: 'MinSans-Medium'; font-size: 12px; text-align: center; }
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList option { background: var(--bgcolor); color: #fff; }
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList::-ms-expand { display: none; }
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList:focus { outline: none; }
-    header .gnbBtn_wrap .gnbMobile .listBox #optionList:focus + .arrowIcon { animation:rotate 0.5s linear; transform: rotate(180deg); }
-    @keyframes rotate { 0%{transform: rotate(0deg);} 100%{transform: rotate(180deg);} } 
-    header .gnbBtn_wrap .gnbMobile .listBox .arrowIcon { transform: rotate(0deg); z-index: 1; position: absolute; display: block; width: 10px; height: 10px; top: 12px; right: 6px; background: url(../img/down-arrow.png); background-size: cover; } 
+   
+    header .gnbBtn_wrap .gnbMobile .listBox { z-index: 1; position: absolute; width: 31%; right: 0; } 
+    header .gnbBtn_wrap .gnbMobile .listBox li:not(.familysite)  { display: none; }
+    header .gnbBtn_wrap .gnbMobile .listBox li.familysite { text-align: center; height: 35px; line-height: 30px; background-color: transparent; border: 1px solid var(--bgcolor); border-radius: 5px; }
+    header .gnbBtn_wrap .gnbMobile .listBox li.familysite span {  font-size: 12px; }
+    header .gnbBtn_wrap .gnbMobile .listBox.checked li:not(.familysite) { display: block; height: 35px; line-height: 35px; right: 0; text-align: center; background-color: var(--bgcolor); border-bottom: 1px solid #fff; }
+    header .gnbBtn_wrap .gnbMobile .listBox.checked li:not(.familysite) span { color: #fff; }
+    header .gnbBtn_wrap .gnbMobile .listBox.checked .arrowIcon { animation: slideup 0.5s linear; animation-fill-mode: forwards;}
+    @keyframes slideup { 0%{ transform: rotate(0deg); } 100%{ transform: rotate(180deg);}}
+    header .gnbBtn_wrap .gnbMobile .listBox .arrowIcon { position: absolute; width: 10px; height: 10px; top:13px; right: 10%; background: url(../img/down-arrow.png) no-repeat center; display: block; background-size: cover; }
+
     header .gnbBtn_wrap .gnbMobile .main_optionList>li:first-of-type { border-top: 1px solid #bebebe; }
     header .gnbBtn_wrap .gnbMobile .main_optionList>li { position: relative; border-bottom: 1px solid #bebebe; }
     header .gnbBtn_wrap .gnbMobile .main_optionList>li:hover a { color: var(--bgcolor);}
