@@ -1,4 +1,4 @@
-$(document).ready(function(){ 
+$(document).ready(function(){  
 
     // 마우스 포인터 감지 - 립스틱 포인터 작게 바꾸기
     $(document).on('mousemove', function(e) {
