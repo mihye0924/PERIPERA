@@ -177,7 +177,7 @@ $(document).ready(function(){
 
       $('.quickbar-bg').on('click',function(){
         $('#snb').animate({right:'-259'},1000) 
-        $('#snb .snbSlide_wra').css({ boxShadow : 'unset'}) 
+        $('#snb .snbSlide_wrap').css({ boxShadow : 'unset'}) 
         $('#snb .snbBtn li').removeClass('active')
         $('.quickbar-bg').removeClass('active')
       })
