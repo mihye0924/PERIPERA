@@ -177,7 +177,7 @@ $(document).ready(function(){
 
       $('.quickbar-bg').on('click',function(){
         $('#snb').animate({right:'-259'},1000) 
-        $('#snb .snbSlide_wrap').css({ boxShadow : 'unset'}) 
+        $('#snb .snbSlide_wra').css({ boxShadow : 'unset'}) 
         $('#snb .snbBtn li').removeClass('active')
         $('.quickbar-bg').removeClass('active')
       })
@@ -354,21 +354,19 @@ $(document).ready(function(){
         })
         $(truerx).on('click',function(){ 
           document.querySelector('.familysite span').textContent ='트루알엑스'  
-        }) 
+        })
 
-        $(window).on('scroll',function(){ 
-          var scrollHeight = $(document).height();
-          var ftHeight = $('#footer_wrap').height(); 
-          var window = $(this).height()
-          var top =  $(this).scrollTop()
-
-            if(top > scrollHeight-ftHeight-window ){
-              $('#bottomBtn_wrap').addClass('animate__bottom') 
-            }else{
-              $('#bottomBtn_wrap').removeClass('animate__bottom') 
-            }  
-          })
-
+        // 태블릿,모바일 시 bottom kakao & top 
+        var scrollHeight = $(document).height();
+        var ftHeight = $('#footer_wrap').height(); 
+        $(window).on('scroll',function(){
+          var scrollPosition = $(window).height() + $(window).scrollTop();
+          if(scrollHeight < scrollPosition+ftHeight){
+            $('#bottomBtn_wrap').addClass('animate__bottom') 
+          }else{
+            $('#bottomBtn_wrap').removeClass('animate__bottom') 
+          }  
+        })
 
     }); //스크립트 마지막
 

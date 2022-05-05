@@ -890,7 +890,7 @@ footer #footer_wrap .inner_right .address span { display: block; margin-top: 5px
     a, p, span, h1, h2, h3, h4, h5, h6 { font-size: 12px; }
 
     /* header */
-    header .gnb_wrap, header .gnb_wrap_clone.fixed, #snb, #video,#video2 #bottomBtn_wrap { display: none; }
+    header .gnb_wrap, header .gnb_wrap_clone.fixed, #snb, #video, #video2, #bottomBtn_wrap { display: none; }
     header { height: 65px; }
     header .logo { width: 115px; height: 40px; }
 
