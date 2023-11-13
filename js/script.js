@@ -34,12 +34,12 @@ $(document).ready(function(){
       }, 
       autoplay: {
         delay: 1000, 
-        disableOnInteraction: false
-        
+        disableOnInteraction: true 
       },
       loop:true, 
       slidesPerView: 2, 
       spaceBetween: 10,
+      loopAdditionalSlides : 3,
       on: {
         init() {
           this.el.addEventListener('mouseenter', () => {
@@ -52,12 +52,12 @@ $(document).ready(function(){
         }
       },
       breakpoints: {
-        1024:{
+        1024:{ 
           slidesPerView : 4,
           spaceBetween : 10,
         },
-        768: {
-          slidesPerView: 3, 
+        768: {  
+          slidesPerView : 3,
           spaceBetween: 10,
          },
         480: {
