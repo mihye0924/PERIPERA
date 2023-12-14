@@ -5,8 +5,10 @@
 # Site Link
 https://mihye0924.github.io/PERIPERA/peripera.html
 
->작업용도: 홈페이지 
+>작업용도: 홈페이지
+>
 >작업기간: 30일이내
+>
 >작업 수: 1명
   
 ------------
