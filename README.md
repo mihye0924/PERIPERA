@@ -1,4 +1,4 @@
-# Peripera 
+# Peripera Site Clone
 ![peripera](https://github.com/mihye0924/PERIPERA/assets/71968785/781a43ee-a940-44e5-8acd-d76bfcee237b)
 
 ------------
