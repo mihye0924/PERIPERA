@@ -17,9 +17,6 @@ https://mihye0924.github.io/PERIPERA/peripera.html
 <img src="https://github.com/mihye0924/react_context_app/assets/71968785/557f00bf-2f5f-4bc9-9d63-10565250d6f9" width="30">
 <img src="https://github.com/mihye0924/react_context_app/assets/71968785/64f67e8b-759f-4063-a3bc-29dc3918e44b" width="30">
 
-#### Config
-<img src="https://github.com/mihye0924/react_context_app/assets/71968785/64725c2b-af8d-4891-9ef1-f1068d1fd019" width="30">
-
 #### Development  
 <img src="https://github.com/mihye0924/PERIPERA/assets/71968785/7b32d8ff-cb6b-4f81-9501-357f15c48994" width="30">
 <img src="https://github.com/mihye0924/PERIPERA/assets/71968785/f71d27fe-0839-43c4-bafe-7f9fe7474639" width="30">
