@@ -20,5 +20,4 @@ https://mihye0924.github.io/PERIPERA/peripera.html
 #### Development  
 <img src="https://github.com/mihye0924/PERIPERA/assets/71968785/7b32d8ff-cb6b-4f81-9501-357f15c48994" width="30">
 <img src="https://github.com/mihye0924/PERIPERA/assets/71968785/f71d27fe-0839-43c4-bafe-7f9fe7474639" width="30">
-<img src="https://github.com/mihye0924/PERIPERA/assets/71968785/171f03bc-fc22-456c-aedf-ad9c944c70ae" width="30">
-<img src="https://github.com/mihye0924/PERIPERA/assets/71968785/cb610d03-b84a-49bc-aea0-bee77aefd027" width="30">
+<img src="https://github.com/mihye0924/PERIPERA/assets/71968785/171f03bc-fc22-456c-aedf-ad9c944c70ae" width="30"> 
